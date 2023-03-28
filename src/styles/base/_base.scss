@@ -1,0 +1,43 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.app {
+  @include mix.p20;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: vars.$dark;
+}
+
+.container {
+  max-width: calc(vars.$container + (vars.$padding * 2));
+  margin: 0 auto;
+  padding-right: vars.$padding;
+  padding-left: vars.$padding;
+}
+
+.section {
+  padding: fn.cmin(60, 100) 0;
+
+  &-first {
+    padding-top: 100px;
+
+    @media (max-width: vars.$md) {
+      padding-top: 64px;
+    }
+  }
+
+  &__title {
+    @include mix.h2;
+  }
+}
+
+.title {
+  @include mix.h1;
+
+  &_accent {
+    color: rgba(vars.$white, 0.5);
+  }
+}

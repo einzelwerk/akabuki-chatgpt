@@ -1,0 +1,39 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.benefits {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: fn.cmin(30, 60);
+    max-width: 1020px;
+    margin: 0 auto;
+
+    @media (max-width: vars.$md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(20, 24);
+    text-align: center;
+
+    @media (max-width: vars.$md) {
+      &:not(:last-child) {
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(#000, 0.1);
+      }
+    }
+  }
+
+  &__title {
+    @include mix.h1;
+  }
+
+  &__desc {
+    color: #808080;
+  }
+}

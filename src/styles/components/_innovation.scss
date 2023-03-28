@@ -1,0 +1,138 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.innovation {
+  position: relative;
+  padding-bottom: 0;
+  color: vars.$white;
+  text-align: center;
+  background: vars.$dark-blue;
+
+  &__bg {
+    &-wrap {
+      position: absolute;
+      inset: 0;
+    }
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(40, 100);
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 957px;
+
+    @media (max-width: vars.$lg) {
+      @include mix.h2;
+
+      text-align: left;
+    }
+  }
+
+  &__slider {
+    .glide {
+      &__slide {
+        height: unset;
+      }
+
+      &__btn {
+        position: absolute;
+        top: 30px;
+        z-index: 5;
+        display: inline-flex;
+        padding: 20px;
+        color: rgba(vars.$white, 0.4);
+
+        &_prev {
+          left: 0;
+        }
+
+        &_next {
+          right: 0;
+          transform: rotate(180deg);
+        }
+
+        &-icon {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (min-width: vars.$min-xl) {
+      position: absolute;
+      top: 17px;
+      left: 0;
+    }
+
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 400px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border: 1px solid vars.$white;
+      border-radius: 20px;
+
+      &_red {
+        background: vars.$red;
+        border-color: vars.$red;
+      }
+    }
+
+    &-name {
+      @media (max-width: vars.$lg) {
+        padding: 0 20px;
+      }
+    }
+
+    &-btn {
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    &-garant {
+      @include mix.p14;
+
+      margin-top: 12px;
+      color: rgba(vars.$white, 0.5);
+
+      @media (max-width: vars.$md) {
+        margin-top: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use './variables' as vars;
+@use './functions' as fn;
+
+@mixin h1 {
+  font-weight: 500;
+  font-size: fn.cmin(48, 60);
+  font-family: VisbyCF, sans-serif;
+  line-height: fn.cmin(52, 60);
+}
+
+@mixin h2 {
+  font-weight: 500;
+  font-size: fn.cmin(34, 40);
+  font-family: VisbyCF, sans-serif;
+  line-height: fn.cmin(44, 48);
+}
+
+@mixin h3 {
+  font-weight: 500;
+  font-size: fn.cmin(24, 32);
+  font-family: VisbyCF, sans-serif;
+  line-height: fn.cmin(32, 40);
+}
+
+@mixin h4 {
+  font-weight: 500;
+  font-size: fn.cmin(20, 24);
+  font-family: VisbyCF, sans-serif;
+  line-height: fn.cmin(30, 32);
+}
+
+@mixin p20 {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: VisbyCF, sans-serif;
+  line-height: 30px;
+}
+
+@mixin p16 {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: VisbyCF, sans-serif;
+  line-height: 24px;
+}
+
+@mixin p14 {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: VisbyCF, sans-serif;
+  line-height: 18px;
+}
+
+/* paint style */
+
+$dark-blue: #061727;
+$red: #780121;
+$gray: #4f4f4f;
+$white: #fff;
+$chatgpt-color: #343541;
+$dark: #141414;
+$light-dark: #14141499;
+$bg-light: #f5f5f5;

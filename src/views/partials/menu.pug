@@ -1,0 +1,17 @@
+mixin menu(navList)
+  .menu
+    .menu__container.container 
+      .menu__top 
+        .menu__btn-block 
+          a.btn.btn_small.btn_white(href="#") Написать в Telegram
+          a.btn.btn_small.btn_trs(href="mailto:hello@akabuki.pro") hello@akabuki.pro
+        button.menu__close(type="button")
+          svg.menu__close-icon
+            use(xlink:href="./assets/sprite.svg#close")
+      nav.menu__nav 
+        ul.menu__nav-list 
+          each navItem in navList
+            - const activeClass = navItem.isActive ? 'menu__nav-link_active' : '';
+            li.menu__nav-item
+              a.menu__nav-link(class=activeClass href=navItem.href)=navItem.text
+      button.menu__advice.btn.btn_red(type="button" data-popup-open="advice") Консультация

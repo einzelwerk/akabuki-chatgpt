@@ -1,0 +1,41 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.hero {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  color: vars.$white;
+  background: vars.$dark-blue;
+
+  &__bg {
+    &-wrap {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+    }
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (max-width: vars.$sm) {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
+
+  &__title {
+    max-width: 738px;
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  overflow: auto;
+  color: vars.$white;
+  background: vars.$dark;
+  transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+  @media (min-width: vars.$min-lg) {
+    display: none;
+  }
+
+  &_active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__btn-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__close {
+    display: inline-flex;
+    flex: none;
+    padding: 12px;
+    color: vars.$dark;
+    background: vars.$white;
+    border-radius: 50%;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__nav {
+    @include mix.h2;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__advice {
+    margin-top: auto;
+  }
+}

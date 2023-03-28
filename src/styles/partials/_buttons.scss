@@ -1,0 +1,38 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.btn {
+  padding: 14px 24px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &_small {
+    padding: 11px 23px;
+  }
+
+  &_white {
+    color: vars.$dark-blue;
+    background: vars.$white;
+    border-color: vars.$white;
+  }
+
+  &_red {
+    color: vars.$white;
+    background: vars.$red;
+    border-color: vars.$red;
+  }
+
+  &_blue {
+    color: vars.$white;
+    background: vars.$dark-blue;
+    border-color: vars.$dark-blue;
+  }
+
+  &_trs {
+    color: vars.$white;
+    border-color: vars.$white;
+  }
+}

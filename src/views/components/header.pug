@@ -1,0 +1,41 @@
+include ../partials/menu
+
+mixin header
+  -
+    const navList = [
+      {
+        isActive: true,
+        text: 'Главная',
+        href: './index.html',
+      },
+      {
+        isActive: false,
+        text: 'Тарифы',
+        href: './tarifs.html',
+      },
+      {
+        isActive: false,
+        text: 'Обо мне',
+        href: './about.html',
+      },
+    ];
+  +menu(navList)
+  header.header
+    .header__container.container
+      a.header__logo(href="#") 
+        svg.header__logo-icon
+          use(xlink:href="./assets/sprite.svg#logo")
+      nav.header__nav 
+        ul.header__nav-list
+          each navItem in navList
+            - const activeClass = navItem.isActive ? 'header__nav-link_active' : '';
+            li.header__nav-item
+              a.header__nav-link(class=activeClass href=navItem.href)=navItem.text
+      .header__contacts 
+        a.header__contacts-tel(href="tel:+78009999999") +7 800 999 99 99
+        button.header__contacts-advice.btn.btn_white(type="button" data-popup-open="advice") Консультация
+      button.header__burger(type="button")
+        span.header__burger-item
+        span.header__burger-item
+        span.header__burger-item
+

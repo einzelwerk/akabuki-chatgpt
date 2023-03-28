@@ -1,0 +1,23 @@
+mixin benefits
+  section.benefits.section
+    .benefits__container.container 
+      -
+        const benefitsList = [
+          {
+            title: 'Бизнес',
+            desc: 'В 5 раз быстрее написание поста для блога (10-30 минут, заместо 2-3 часов)',
+          },
+          {
+            title: 'Работа',
+            desc: 'В 6 раз быстрее написание поста для блога (10-30 минут, заместо 2-3 часов)',
+          },
+          {
+            title: 'Учёба',
+            desc: 'В 3 раза быстрее написание поста для блога (10-30 минут, заместо 2-3 часов)',
+          },
+        ];
+      ul.benefits__list 
+        each benefitItem in benefitsList
+          li.benefits__item
+            h2.benefits__title=benefitItem.title
+            p.benefits__desc=benefitItem.desc
