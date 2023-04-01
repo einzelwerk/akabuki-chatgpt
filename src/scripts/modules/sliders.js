@@ -1,19 +1,102 @@
-import Glide from '@glidejs/glide';
+import Swiper, { Autoplay, Navigation, Scrollbar } from 'swiper';
 import { classNames } from '../utils/classNames';
+import { breakpointsMin } from '../utils/breakpoints';
 
-import '@glidejs/glide/dist/css/glide.core.min.css'; // eslint-disable-line import/no-unresolved
-import '@glidejs/glide/dist/css/glide.theme.min.css'; // eslint-disable-line import/no-unresolved
+import 'swiper/css/bundle'; // eslint-disable-line import/no-unresolved
 
 export function initInnovationSlider() {
-  const sliderClass = classNames.slider.innovation;
+  const sliderClass = classNames.slider.innovation.slider;
+  const sliderPrevClass = classNames.slider.innovation.btnPrev;
+  const sliderNextClass = classNames.slider.innovation.btnNext;
 
-  return new Glide(`.${sliderClass}`, {
-    type: 'slider',
-    startAt: 0,
-    perView: 1,
-    gap: 20,
-    animationDuration: 1000,
-    bound: true,
-    perTouch: 3,
-  }).mount();
+  return new Swiper(`.${sliderClass}`, {
+    modules: [Navigation],
+    navigation: {
+      prevEl: `.${sliderPrevClass}`,
+      nextEl: `.${sliderNextClass}`,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 1000,
+    keyboard: true,
+  });
+}
+
+export function initPresentationSlider() {
+  const sliderClass = classNames.slider.presentation;
+
+  return new Swiper(`.${sliderClass}`, {
+    modules: [Autoplay],
+    autoplay: {
+      delay: 5000,
+    },
+    slidesPerView: 1.1,
+    initialSlide: 1,
+    loop: true,
+    spaceBetween: 20,
+    speed: 1000,
+    centeredSlides: true,
+    keyboard: true,
+
+    breakpoints: {
+      [breakpointsMin.lg]: {
+        slidesPerView: 1.5,
+      },
+      [breakpointsMin.xl]: {
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+
+export function initResonsSlider() {
+  const sliderClass = classNames.slider.resons.slider;
+  const sliderPrevClass = classNames.slider.resons.btnPrev;
+  const sliderNextClass = classNames.slider.resons.btnNext;
+  const sliderScrollbarClass = classNames.slider.resons.scrollbar;
+  const sliderScrollbarDragClass = classNames.slider.resons.scrollbarDrag;
+
+  return new Swiper(`.${sliderClass}`, {
+    modules: [Navigation, Scrollbar],
+    navigation: {
+      prevEl: `.${sliderPrevClass}`,
+      nextEl: `.${sliderNextClass}`,
+    },
+    scrollbar: {
+      el: `.${sliderScrollbarClass}`,
+      dragClass: sliderScrollbarDragClass,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 1000,
+    keyboard: true,
+    breakpoints: {
+      [breakpointsMin.md]: {
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+
+export function initReviewsSlider() {
+  const classSwiper = classNames.slider.testimonials.slider;
+
+  return new Swiper(`.${classSwiper}`, {
+    modules: [Navigation],
+    navigation: {
+      prevEl: `.${classNames.slider.testimonials.btnPrev}`,
+      nextEl: `.${classNames.slider.testimonials.btnNext}`,
+    },
+    slidesPerView: 1,
+    spaceBetween: 40,
+    speed: 1000,
+    breakpoints: {
+      [breakpointsMin.md]: {
+        slidesPerView: 1.072,
+      },
+      [breakpointsMin.xl]: {
+        slidesPerView: 2.11,
+      },
+    },
+  });
 }

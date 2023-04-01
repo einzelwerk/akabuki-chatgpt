@@ -1,0 +1,26 @@
+include ../partials/buttons
+
+mixin resons
+  section.resons.section
+    .resons__container.container
+      .resons__title-block.section__title-block
+        h2.section__title Почему ChatGPT следует внедрять в бизнес?
+        span.section__title-desc Инструкция
+      .resons__slider.swiper
+        ul.swiper-wrapper
+          li.swiper-slide
+            p.resons__desc ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.
+          li.swiper-slide
+            p.resons__desc ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.
+          li.swiper-slide
+            p.resons__desc ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.
+          li.swiper-slide
+            p.resons__desc ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.
+        .resons__slider-scrollbar
+        .resons__slider-btn-block
+          +btn-arrow({
+            isRight: false,
+          }, 'resons__slider-btn resons__slider-btn_prev')
+          +btn-arrow({
+            isRight: true,
+          }, 'resons__slider-btn resons__slider-btn_next')

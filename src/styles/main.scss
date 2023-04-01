@@ -7,10 +7,28 @@
 @use './base/base';
 @use './partials/buttons';
 @use './partials/menu';
+@use './partials/poster';
+@use './partials/select';
+@use './partials/fixed';
 
 //  Components
 @use './components/header';
 @use './components/footer';
+@use './components/popups';
 @use './components/hero';
 @use './components/benefits';
 @use './components/innovation';
+@use './components/presentation';
+@use './components/resons';
+@use './components/applications';
+@use './components/visuals';
+@use './components/guide';
+@use './components/about';
+@use './components/consultations';
+@use './components/usage';
+@use './components/testimonials';
+@use './components/steps';
+@use './components/integration';
+@use './components/trial';
+
+

@@ -1,0 +1,211 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.consultations {
+  position: relative;
+  z-index: 2;
+  color: vars.$white;
+  background: vars.$dark-blue;
+
+  &__bg {
+    &-wrap {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+    }
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(40, 60);
+  }
+
+  &__title {
+    @media (max-width: vars.$md) {
+      @include mix.h3;
+    }
+  }
+
+  &__table {
+    @include mix.p14;
+
+    color: vars.$dark;
+    background: vars.$white;
+    border-radius: 20px;
+
+    @media (max-width: vars.$xl) {
+      display: none;
+    }
+  }
+
+  &__acc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: vars.$dark;
+
+    @media (min-width: vars.$min-xl) {
+      display: none;
+    }
+
+    &-item {
+      background: vars.$white;
+      border-radius: 20px;
+    }
+  }
+
+  &__row {
+    &:nth-child(2n + 1) {
+      background: vars.$bg-light;
+    }
+
+    @media (min-width: vars.$xl) {
+      &:first-child {
+        & > * {
+          &:first-child {
+            border-radius: 20px 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 20px 0 0;
+          }
+        }
+      }
+
+      &:last-child {
+        & > * {
+          &:first-child {
+            border-radius: 0 0 0 20px;
+          }
+
+          &:last-child {
+            border-radius: 0 0 20px;
+          }
+        }
+      }
+    }
+
+    &_main {
+      vertical-align: top;
+      background: none !important;
+    }
+
+    &_empty {
+      height: 26px;
+      background: vars.$bg-light !important;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    padding-bottom: fn.cmin(10, 20);
+    text-align: left;
+
+    &_info {
+      flex: none;
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: rgba(vars.$dark, 0.1);
+      content: '';
+    }
+  }
+
+  &__heading {
+    @include mix.h2;
+  }
+
+  &__time {
+    @include mix.h2;
+
+    margin-bottom: 4px;
+  }
+
+  &__price {
+    @include mix.h4;
+
+    margin-bottom: 16px;
+    color: vars.$gray;
+  }
+
+  &__desc {
+    @include mix.p16;
+
+    margin-bottom: fn.cmin(20, 26);
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__more {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: rgba(#000, 0.5);
+
+    &.is-active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-full {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+    }
+
+    &-icon {
+      width: 12px;
+      height: 7px;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__item {
+    height: 48px;
+    padding: 5px 17px;
+    text-align: center;
+    vertical-align: middle;
+
+    &_text {
+      text-align: left;
+    }
+
+    @media (max-width: vars.$xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+      text-align: left;
+    }
+  }
+
+  &__icon {
+    flex: none;
+    width: 20px;
+    height: 15px;
+    color: #cbcbcb;
+
+    &_checked {
+      color: vars.$red;
+    }
+  }
+}

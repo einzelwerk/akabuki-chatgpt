@@ -1,0 +1,48 @@
+mixin presentation
+  -
+    const presentationList = [
+      {
+        src: '@/assets/img/presentation/img-1.jpg',
+        name: 'Написание скриптов',
+        desc: 'Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем',
+      },
+      {
+        src: '@/assets/img/presentation/img-2.jpg',
+        name: 'Решение задач',
+        desc: 'Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем',
+      },
+            {
+        src: '@/assets/img/presentation/img-3.jpg',
+        name: 'Написание скриптов',
+        desc: 'Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем',
+      },
+      {
+        src: '@/assets/img/presentation/img-4.jpg',
+        name: 'Решение задач',
+        desc: 'Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем',
+      },
+      {
+        src: '@/assets/img/presentation/img-4.jpg',
+        name: 'Решение задач',
+        desc: 'Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем',
+      },
+      {
+        src: '@/assets/img/presentation/img-4.jpg',
+        name: 'Решение задач',
+        desc: 'Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем',
+      },
+    ];
+  section.presentation.section
+    .presentation__slider.swiper
+      ul.swiper-wrapper
+        each presentation in presentationList
+          li.presentation__slider-slide.swiper-slide
+            .presentation__content
+              button.presentation__increase(type="button")
+                svg.presentation__increase-icon
+                  use(xlink:href="./assets/sprite.svg#full")
+                picture.presentation__img-wrap 
+                  img.presentation__img(src=presentation.src, alt="")
+              .presentation__text-block 
+                strong.presentation__name=presentation.name
+                p.presentation__desc=presentation.desc

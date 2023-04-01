@@ -1,0 +1,75 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.applications {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 415px;
+  }
+
+  &__desc {
+    max-width: 808px;
+    color: rgba(vars.$dark, 0.6);
+  }
+
+  &__table {
+    &-block {
+      overflow-x: auto;
+
+      @media (max-width: vars.$xxl) {
+        padding-bottom: 30px;
+      }
+
+      @media (max-width: vars.$md) {
+        @include mix.p14;
+      }
+    }
+
+    width: max-content;
+    border-collapse: separate;
+    border-spacing: 10px;
+
+    &-field {
+      width: fn.cmin(200, 324);
+      height: fn.cmin(60, 88);
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+      background: vars.$bg-light;
+      border: 1px solid vars.$bg-light;
+      border-radius: fn.cmin(10, 20);
+    }
+
+    &-blue {
+      color: vars.$white;
+      background: vars.$dark-blue;
+      border-color: vars.$dark-blue;
+    }
+
+    &-red {
+      color: vars.$white;
+      background: vars.$red;
+      border-color: vars.$red;
+    }
+
+    &-red-trs {
+      color: vars.$red;
+      background: none;
+      border-color: vars.$red;
+    }
+  }
+}

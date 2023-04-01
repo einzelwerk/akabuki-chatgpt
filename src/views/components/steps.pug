@@ -1,0 +1,33 @@
+mixin steps
+  -
+    const stepsList = [
+      {
+        step: '1 шаг',
+        name: 'Ознакомиться с нашим материалом про ChatGPT',
+        src: '@/assets/img/steps/step-1.jpg',
+      },
+      {
+        step: '2 шаг',
+        name: 'Получить консультацию по ChatGPT',
+        src: '@/assets/img/steps/step-2.jpg',
+      },
+      {
+        step: '3 шаг',
+        name: 'Интегрировать ChatGPT в ваш бизнес',
+        src: '@/assets/img/steps/step-3.jpg',
+      },
+    ];
+  .steps.section
+    .steps__container.container
+      ul.steps__list
+        li.steps__item
+          .steps__content.steps__content_circle
+            strong.steps__name Начните использовать ChatGPT в своем бизнесе в 3 шага
+          each item in stepsList
+            li.steps__item 
+              a.steps__content(href="#") 
+                picture.steps__img-wrap
+                  img.steps__img(src=item.src, alt="")
+                .steps__text-block
+                  span.steps__step=item.step
+                  strong.steps__name=item.name

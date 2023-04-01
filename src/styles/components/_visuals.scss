@@ -1,0 +1,102 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.visuals {
+  background: vars.$bg-light;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(40, 60);
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__title {
+    @include mix.h1;
+  }
+
+  &__btn {
+    &-block {
+      display: flex;
+      gap: 5px;
+      padding: 5px;
+      color: vars.$white;
+      background: vars.$dark-blue;
+      border-radius: 20px;
+
+      @media (max-width: vars.$lg) {
+        display: none;
+      }
+    }
+
+    color: vars.$white;
+    background: rgba(vars.$white, 0.1);
+    border-color: rgba(vars.$white, 0.1);
+
+    &_active {
+      color: vars.$dark-blue;
+      background: vars.$white;
+      border-color: vars.$white;
+    }
+  }
+
+  &__select {
+    width: 100%;
+
+    @media (min-width: vars.$min-lg) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    counter-reset: my-counter;
+
+    &:not(&_active) {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    padding: fn.cmin(32, 60) 0;
+    border-top: 1px solid vars.$divider-on-light-bg;
+    border-bottom: 1px solid vars.$divider-on-light-bg;
+
+    @media (max-width: vars.$md) {
+      flex-direction: column;
+    }
+  }
+
+  &__name {
+    @include mix.h3;
+
+    display: flex;
+    gap: fn.cmax(24, 90);
+    width: 100%;
+    max-width: 532px;
+
+    &::before {
+      min-width: fn.cmin(24, 40);
+      color: #999;
+      content: counter(my-counter);
+      counter-increment: my-counter;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    max-width: 488px;
+  }
+}

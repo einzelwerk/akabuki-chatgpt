@@ -1,0 +1,43 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.resons {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title-block {
+    max-width: 392px;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 813px;
+    height: auto;
+    margin: 0;
+
+    &-scrollbar {
+      height: 1px;
+      margin-top: fn.cmin(40, 60);
+      background: rgba(vars.$dark, 0.1);
+
+      &-drag {
+        height: 100%;
+        background: vars.$dark;
+      }
+    }
+
+    &-btn {
+      &-block {
+        display: flex;
+        gap: 10px;
+        margin-top: 38px;
+      }
+    }
+  }
+}

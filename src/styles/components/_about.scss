@@ -1,0 +1,75 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.about {
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 400px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(40, 60);
+    max-width: 822px;
+  }
+
+  &__desc {
+    @include mix.h3;
+
+    &_accent {
+      color: rgba(vars.$dark, 0.5);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+    max-width: 659px;
+
+    @media (max-width: vars.$lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(10, 20);
+
+    @media (min-width: vars.$min-lg) {
+      &:nth-child(2n) {
+        padding-left: 30px;
+        border-left: 1px solid rgba(vars.$dark, 0.1);
+      }
+    }
+
+    &-name {
+      @include mix.h2;
+    }
+
+    &-desc {
+      @include mix.p16;
+
+      color: #999;
+    }
+  }
+
+  &__img {
+    &-wrap {
+      width: 100%;
+    }
+
+    width: 100%;
+  }
+}

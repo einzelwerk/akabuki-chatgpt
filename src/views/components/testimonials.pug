@@ -1,0 +1,50 @@
+include ../partials/buttons
+
+mixin testimonials()
+  section.testimonials.section
+    .testimonials__container.container
+      h2.testimonials__title.section__title Отзывы экспериментаторов
+      .testimonials__slider-block
+        .swiper.testimonials__slider 
+          .testimonials__slider-btn-block 
+            +btn-arrow({
+              isRight: false,
+            }, 'testimonials__slider-btn testimonials__slider-btn_prev')
+            +btn-arrow({
+              isRight: true,
+            }, 'testimonials__slider-btn testimonials__slider-btn_next')
+          ul.swiper-wrapper 
+            li.swiper-slide
+              .testimonials__item 
+                blockquote.testimonials__quote 
+                  |«Решила оставить отзыв о бизнес-консультации моего мужа. Я считаю, что это очень круто! 
+                  span.testimonials__quote_accent Он в жизни не был бизнес-тренере
+                  |, но благодаря этой консультации в один момент он стал им. И теперь мы с ним вместе занимаемся бизнесом по своему вкусу, а не по чужому. 
+                .testimonials__person
+                  picture.testimonials__avatar-wrap
+                    img.testimonials__avatar(src="@/assets/img/testimonials/avatar-1.png" alt="")
+                  .testimonials__person-text-block 
+                    span.testimonials__name Романов Сергей Егорович
+                    span.testimonials__job Noname Agency / Lead Designer
+            li.swiper-slide
+              .testimonials__item 
+                blockquote.testimonials__quote 
+                  |«Я очень довольна консультацией, особенно тем, что врач мне все подробно объяснил, рассказал и дал рекомендации. 
+                  span.testimonials__quote_accent Мне все понравилось. Все было хорошо, я осталась довольна. 
+                  |Очень понравилась консультация.»
+                .testimonials__person
+                  picture.testimonials__avatar-wrap
+                    img.testimonials__avatar(src="@/assets/img/testimonials/avatar-2.png" alt="")
+                  .testimonials__person-text-block 
+                    span.testimonials__name Николаева Марта Антоновна
+                    span.testimonials__job Noname Agency / Lead Designer
+            li.swiper-slide
+              .testimonials__item 
+                blockquote.testimonials__quote 
+                  |«Спасибо за такую возможность. Консультация была очень полезной. Врач все объяснил доступно. Приду еще на прием.»
+                .testimonials__person
+                  picture.testimonials__avatar-wrap
+                    img.testimonials__avatar(src="@/assets/img/testimonials/avatar-3.png" alt="")
+                  .testimonials__person-text-block 
+                    span.testimonials__name Поляков Даниил Фёдорович
+                    span.testimonials__job Noname Agency / Lead Designer

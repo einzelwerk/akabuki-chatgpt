@@ -48,19 +48,23 @@ export class SingleSelect {
     this.selectBody.classList.add('select__body');
     this.customSelect.append(this.selectBody);
 
-    this.optionsCollection = Array.from(this.originalSelect.querySelectorAll('option')).map(
-      ({ textContent, value }, index) => {
-        const optionElement = document.createElement('div');
-        optionElement.classList.add('select__option', 'select__option_body');
+    this.optionsCollection = Array.from(this.originalSelect.querySelectorAll('option')).map((optionEl, index) => {
+      const newOptionEl = document.createElement('div');
+      
+      optionEl.getAttributeNames().forEach((attr) => {
+        if (attr === 'value') return;
+        newOptionEl.setAttribute(attr, optionEl.getAttribute(attr));
+      });
+      
+      newOptionEl.classList.add('select__option', 'select__option_body');
 
-        optionElement.textContent = textContent;
-        optionElement.dataset.value = value;
-        optionElement.dataset.id = index + 1;
+      newOptionEl.textContent = optionEl.textContent;
+      newOptionEl.dataset.value = optionEl.value;
+      newOptionEl.dataset.id = index + 1;
 
-        this.selectBody.append(optionElement);
-        return optionElement;
-      }
-    );
+      this.selectBody.append(newOptionEl);
+      return newOptionEl;
+    });
 
     const firstOption = this.optionsCollection[0].cloneNode(true);
     this.optionsCollection[0].classList.add('is-selected');

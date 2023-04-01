@@ -1,5 +1,8 @@
 include ../components/header
 include ../components/footer
+include ../components/popups
+include ../partials/fixed
+
 
 block vars
   - const title = 'Document'
@@ -19,6 +22,9 @@ html(lang=lang)
     title #{title}
   body
     div(class="app " + pageName)
+      .overlay 
+        +popupZoom
+      +fixed
       +header
       main.main
         block content

@@ -1,3 +1,64 @@
 @use '../utils/variables' as vars;
 @use '../utils/mixins' as mix;
 @use '../utils/functions' as fn;
+
+.footer {
+  @include mix.p16;
+
+  margin-top: auto;
+  padding-top: fn.cmin(40, 60);
+  padding-bottom: fn.cmin(40, 44);
+  color: vars.$white;
+  background: vars.$dark-blue;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fn.cmax(40, 120);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(24, 32);
+    max-width: 320px;
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    &-icon {
+      width: 169px;
+      height: 10px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__nav-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fn.cmax(40, 120);
+    margin-left: auto;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &-title {
+      color: rgba(vars.$white, 0.4);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}

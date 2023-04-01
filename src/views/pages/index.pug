@@ -8,7 +8,44 @@ block content
   include ../components/hero
   include ../components/benefits
   include ../components/innovation
+  include ../components/presentation
+  include ../components/resons
+  include ../partials/poster
+  include ../components/applications
+  include ../components/visuals
+  include ../components/guide
+  include ../components/about
+  include ../components/consultations
+  include ../components/usage
+  include ../components/testimonials
+  include ../components/steps
+  include ../components/integration
+  include ../components/trial
 
   +hero
   +benefits
   +innovation
+  +presentation
+  +resons
+  +poster({
+    src: '@/assets/img/poster/woman.jpg',
+    mobileSrc: '@/assets/img/poster/woman-mobile.jpg',
+  })
+  +applications
+  +visuals
+  +poster({
+    src: '@/assets/img/poster/books.jpg',
+    mobileSrc: '@/assets/img/poster/books-mobile.jpg',
+  })
+  +guide
+  +about
+  +poster({
+    src: '@/assets/img/poster/books.jpg',
+    mobileSrc: '@/assets/img/poster/books-mobile.jpg',
+  })
+  +consultations
+  +usage
+  +testimonials
+  +steps
+  +integration
+  +trial

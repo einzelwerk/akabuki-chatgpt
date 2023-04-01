@@ -1,8 +1,7 @@
 @use './variables' as vars;
 
 @function overhang() {
-  $margin: (100vw - vars.$container) / 2;
-  @return -1 * $margin;
+  @return calc((-100vw + vars.$container) / 2);
 }
 
 @function cmin($min, $max) {

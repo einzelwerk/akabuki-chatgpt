@@ -11,6 +11,52 @@ export const classNames = {
     close: 'menu__close',
   },
   slider: {
-    innovation: 'innovation__slider',
-  }
+    innovation: {
+      slider: 'innovation__slider',
+      btnPrev: 'innovation__slider-btn_prev',
+      btnNext: 'innovation__slider-btn_next',
+    },
+    presentation: 'presentation__slider',
+    resons: {
+      slider: 'resons__slider',
+      btnPrev: 'resons__slider-btn_prev',
+      btnNext: 'resons__slider-btn_next',
+      scrollbar: 'resons__slider-scrollbar',
+      scrollbarDrag: 'resons__slider-scrollbar-drag',
+    },
+    testimonials: {
+      slider: 'testimonials__slider',
+      btnPrev: 'testimonials__slider-btn_prev',
+      btnNext: 'testimonials__slider-btn_next',
+    },
+  },
+  popups: {
+    overlay: {
+      block: 'overlay',
+      blockActive: 'overlay_active',
+    },
+    popup: {
+      block: 'popup',
+      blockActive: 'popup_active',
+    },
+    zoom: {
+      block: 'popup_zoom',
+      img: 'popup-zoom__img',
+    },
+  },
+  zoom: ['presentation__increase'],
+  tabs: {
+    visuals: {
+      btn: 'visuals__btn',
+      btnMobile: 'visuals__btn-mobile',
+      btnActive: 'visuals__btn_active',
+      tab: 'visuals__list',
+      tabActive: 'visuals__list_active',
+    },
+  },
+  fixed: {
+    block: 'fixed',
+    active: 'fixed_active',
+    dependent: 'hero',
+  },
 };

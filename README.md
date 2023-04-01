@@ -1,2 +1,2 @@
-# Akabuki ChatGPT - https://einzelwerk.github.io/chat-gpt
+# Akabuki ChatGPT - https://einzelwerk.github.io/akabuki-chatgpt
 

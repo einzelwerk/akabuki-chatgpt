@@ -1,0 +1,80 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.testimonials {
+  background: vars.$bg-light;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__slider-block {
+    margin-right: fn.overhang();
+
+    @media (max-width: vars.$md) {
+      margin-right: 0;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(22, 40);
+
+    &-btn-block {
+      display: flex;
+      gap: 12px;
+
+      @media (max-width: vars.$md) {
+        order: 2;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(22, 30);
+  }
+
+  &__quote {
+    @include mix.h3;
+
+    &_accent {
+      color: vars.$text-gray;
+    }
+  }
+
+  &__person {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    &-text-block {
+      display: flex;
+
+      @include mix.p16;
+
+      flex-direction: column;
+    }
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+
+    @media (max-width: vars.$md) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__job {
+    color: rgba(vars.$dark, 0.4);
+  }
+}

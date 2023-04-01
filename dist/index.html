@@ -11,10 +11,21 @@
   </head>
   <body>
     <div class="app home-page">
+      <div class="overlay"> 
+        <div class="popup popup_zoom">
+          <picture class="popup-zoom__img-wrap"><img class="popup-zoom__img" src="" alt=""/></picture>
+        </div>
+      </div>
+      <div class="fixed"> 
+        <div class="fixed__container container"> 
+          <button class="fixed__btn btn btn_red btn_uppercase btn_lengthy" type="button">Купить Руководство</button>
+          <button class="fixed__btn btn btn_white btn_uppercase btn_lengthy" type="button">Заплонировать встречу</button>
+        </div>
+      </div>
       <div class="menu">
         <div class="menu__container container"> 
           <div class="menu__top"> 
-            <div class="menu__btn-block"> <a class="btn btn_small btn_white" href="#">Написать в Telegram</a><a class="btn btn_small btn_trs" href="mailto:hello@akabuki.pro">hello@akabuki.pro</a></div>
+            <div class="menu__btn-block"> <a class="btn btn_small btn_white btn_fit" href="#">Написать в Telegram</a><a class="btn btn_small btn_trs btn_fit" href="mailto:hello@akabuki.pro">hello@akabuki.pro</a></div>
             <button class="menu__close" type="button">
               <svg class="menu__close-icon">
                 <use xlink:href="./assets/sprite.svg#close"></use>
@@ -79,48 +90,44 @@
                   <div class="innovation__container container"> 
                     <h2 class="title innovation__title">
                        ChatGPT - инновационное решение для вашего бизнеса <span class="title_accent">и мы готовы помочь вам интегрировать его в рабочие процессы </span></h2>
-                    <div class="glide innovation__slider">
-                      <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                          <li class="glide__slide">
-                            <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Создание SEO-контента для сайтов</span>
-                              <button class="innovation__info-btn btn btn_white" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
-                            </div>
-                          </li>
-                          <li class="glide__slide">
-                            <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Продающий и вовлекающий контент для соцсетей</span>
-                              <button class="innovation__info-btn btn btn_white" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
-                            </div>
-                          </li>
-                          <li class="glide__slide">
-                            <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Ускоряет работу над проектом и оптимизирует рабочие процессы</span>
-                              <button class="innovation__info-btn btn btn_white" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
-                            </div>
-                          </li>
-                          <li class="glide__slide">
-                            <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Мгновенно генерирует идеи для вашего бизнеса</span>
-                              <button class="innovation__info-btn btn btn_white" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
-                            </div>
-                          </li>
-                          <li class="glide__slide">
-                            <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Способен создавать индивидуальный текст за секунды</span>
-                              <button class="innovation__info-btn btn btn_white" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="glide__btn-block" data-glide-el="controls">
-                        <button class="glide__btn glide__btn_prev" data-glide-dir="&lt;">
-                          <svg class="glide__btn-icon">
-                            <use xlink:href="./assets/sprite.svg#arrow-left"></use>
-                          </svg>
-                        </button>
-                        <button class="glide__btn glide__btn_next" data-glide-dir="&gt;">
-                          <svg class="glide__btn-icon">
-                            <use xlink:href="./assets/sprite.svg#arrow-left"></use>
-                          </svg>
-                        </button>
-                      </div>
+                    <div class="innovation__slider swiper">
+                      <ul class="swiper-wrapper">
+                        <li class="innovation__slider-slide swiper-slide">
+                          <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Создание SEO-контента для сайтов</span>
+                            <button class="innovation__info-btn btn btn_white btn_uppercase" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
+                          </div>
+                        </li>
+                        <li class="innovation__slider-slide swiper-slide">
+                          <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Продающий и вовлекающий контент для соцсетей</span>
+                            <button class="innovation__info-btn btn btn_white btn_uppercase" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
+                          </div>
+                        </li>
+                        <li class="innovation__slider-slide swiper-slide">
+                          <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Ускоряет работу над проектом и оптимизирует рабочие процессы</span>
+                            <button class="innovation__info-btn btn btn_white btn_uppercase" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
+                          </div>
+                        </li>
+                        <li class="innovation__slider-slide swiper-slide">
+                          <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Мгновенно генерирует идеи для вашего бизнеса</span>
+                            <button class="innovation__info-btn btn btn_white btn_uppercase" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
+                          </div>
+                        </li>
+                        <li class="innovation__slider-slide swiper-slide">
+                          <div class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Способен создавать индивидуальный текст за секунды</span>
+                            <button class="innovation__info-btn btn btn_white btn_uppercase" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <button class="innovation__slider-btn innovation__slider-btn_prev">
+                        <svg class="innovation__slider-btn-icon">
+                          <use xlink:href="./assets/sprite.svg#arrow-left"></use>
+                        </svg>
+                      </button>
+                      <button class="innovation__slider-btn innovation__slider-btn_next">
+                        <svg class="innovation__slider-btn-icon">
+                          <use xlink:href="./assets/sprite.svg#arrow-left"></use>
+                        </svg>
+                      </button>
                     </div>
                     <div class="innovation__content"> 
                       <div class="innovation__info">
@@ -132,7 +139,7 @@
                         <ul class="innovation__info-list">
                           <li class="innovation__info-item">Мгновенно генерирует идеи для вашего бизнеса</li>
                           <li class="innovation__info-item innovation__info-item_red"> <span class="innovation__info-name">Способен создавать индивидуальный текст за секунды</span>
-                            <button class="innovation__info-btn btn btn_white" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
+                            <button class="innovation__info-btn btn btn_white btn_uppercase" type="button">Купить руководство</button><span class="innovation__info-garant">Гарантия возврата 14 дней</span>
                           </li>
                         </ul>
                       </div>
@@ -140,8 +147,883 @@
                     </div>
                   </div>
                 </section>
+                <section class="presentation section">
+                  <div class="presentation__slider swiper">
+                    <ul class="swiper-wrapper">
+                      <li class="presentation__slider-slide swiper-slide">
+                        <div class="presentation__content">
+                          <button class="presentation__increase" type="button">
+                            <svg class="presentation__increase-icon">
+                              <use xlink:href="./assets/sprite.svg#full"></use>
+                            </svg>
+                            <picture class="presentation__img-wrap"> <img class="presentation__img" src="./assets/img/presentation/img-1.jpg" alt=""></picture>
+                          </button>
+                          <div class="presentation__text-block"> <strong class="presentation__name">Написание скриптов</strong>
+                            <p class="presentation__desc">Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="presentation__slider-slide swiper-slide">
+                        <div class="presentation__content">
+                          <button class="presentation__increase" type="button">
+                            <svg class="presentation__increase-icon">
+                              <use xlink:href="./assets/sprite.svg#full"></use>
+                            </svg>
+                            <picture class="presentation__img-wrap"> <img class="presentation__img" src="./assets/img/presentation/img-2.jpg" alt=""></picture>
+                          </button>
+                          <div class="presentation__text-block"> <strong class="presentation__name">Решение задач</strong>
+                            <p class="presentation__desc">Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="presentation__slider-slide swiper-slide">
+                        <div class="presentation__content">
+                          <button class="presentation__increase" type="button">
+                            <svg class="presentation__increase-icon">
+                              <use xlink:href="./assets/sprite.svg#full"></use>
+                            </svg>
+                            <picture class="presentation__img-wrap"> <img class="presentation__img" src="./assets/img/presentation/img-3.jpg" alt=""></picture>
+                          </button>
+                          <div class="presentation__text-block"> <strong class="presentation__name">Написание скриптов</strong>
+                            <p class="presentation__desc">Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="presentation__slider-slide swiper-slide">
+                        <div class="presentation__content">
+                          <button class="presentation__increase" type="button">
+                            <svg class="presentation__increase-icon">
+                              <use xlink:href="./assets/sprite.svg#full"></use>
+                            </svg>
+                            <picture class="presentation__img-wrap"> <img class="presentation__img" src="./assets/img/presentation/img-4.jpg" alt=""></picture>
+                          </button>
+                          <div class="presentation__text-block"> <strong class="presentation__name">Решение задач</strong>
+                            <p class="presentation__desc">Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="presentation__slider-slide swiper-slide">
+                        <div class="presentation__content">
+                          <button class="presentation__increase" type="button">
+                            <svg class="presentation__increase-icon">
+                              <use xlink:href="./assets/sprite.svg#full"></use>
+                            </svg>
+                            <picture class="presentation__img-wrap"> <img class="presentation__img" src="./assets/img/presentation/img-4.jpg" alt=""></picture>
+                          </button>
+                          <div class="presentation__text-block"> <strong class="presentation__name">Решение задач</strong>
+                            <p class="presentation__desc">Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="presentation__slider-slide swiper-slide">
+                        <div class="presentation__content">
+                          <button class="presentation__increase" type="button">
+                            <svg class="presentation__increase-icon">
+                              <use xlink:href="./assets/sprite.svg#full"></use>
+                            </svg>
+                            <picture class="presentation__img-wrap"> <img class="presentation__img" src="./assets/img/presentation/img-4.jpg" alt=""></picture>
+                          </button>
+                          <div class="presentation__text-block"> <strong class="presentation__name">Решение задач</strong>
+                            <p class="presentation__desc">Написать нужный скрипт для сайта или отрефакторить код С этой задачей ChatGPT справляется без проблем</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+                <section class="resons section">
+                  <div class="resons__container container">
+                    <div class="resons__title-block section__title-block">
+                      <h2 class="section__title">Почему ChatGPT следует внедрять в бизнес?</h2><span class="section__title-desc">Инструкция</span>
+                    </div>
+                    <div class="resons__slider swiper">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                          <p class="resons__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.</p>
+                        </li>
+                        <li class="swiper-slide">
+                          <p class="resons__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.</p>
+                        </li>
+                        <li class="swiper-slide">
+                          <p class="resons__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.</p>
+                        </li>
+                        <li class="swiper-slide">
+                          <p class="resons__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.</p>
+                        </li>
+                      </ul>
+                      <div class="resons__slider-scrollbar"></div>
+                      <div class="resons__slider-btn-block">
+                                <button class="btn-arrow resons__slider-btn resons__slider-btn_prev" type="button"> 
+                                  <svg class="btn-arrow__icon btn-arrow__icon_arrow">
+                                    <use xlink:href="./assets/sprite.svg#arrow-left"></use>
+                                  </svg>
+                                </button>
+                                <button class="btn-arrow resons__slider-btn resons__slider-btn_next" type="button"> 
+                                  <svg class="btn-arrow__icon btn-arrow__icon_arrow btn-arrow__icon_right">
+                                    <use xlink:href="./assets/sprite.svg#arrow-left"></use>
+                                  </svg>
+                                </button>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="poster">
+                  <picture class="poster__img-wrap">
+                    <source media="(max-width: 767.98px)" srcset="./assets/img/poster/woman-mobile.jpg"><img class="poster__img" src="./assets/img/poster/woman.jpg" alt="">
+                  </picture>
+                </div>
+                <section class="section"> 
+                  <div class="applications__container container"> 
+                    <div class="applications__text-block">
+                      <div class="applications__title section__title-block"> 
+                        <h2 class="section__title">В каких сферах можно использовать ChatGPT?</h2><span class="section__title-desc">Инструкция</span>
+                      </div>
+                      <p class="applications__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.</p>
+                    </div>
+                    <div class="applications__table-block">
+                      <table class="applications__table">
+                        <tbody>
+                          <tr></tr>
+                          <tr></tr>
+                          <tr></tr>
+                          <tr>
+                            <td></td>
+                            <th class="applications__table-field applications__table-blue">С помощью ChatGPT</th>
+                            <th class="applications__table-field applications__table-blue">С помощью “расширенного” ChatGPT</th>
+                            <th class="applications__table-field applications__table-red">С помощью нашего обученного ChatGPT</th>
+                          </tr>
+                          <tr>
+                            <th class="applications__table-field applications__table-blue">Написать пост для блога</th>
+                            <td class="applications__table-field">2-3 часа</td>
+                            <td class="applications__table-field">1-2 часа</td>
+                            <td class="applications__table-field applications__table-red-trs">10-30 минут</td>
+                          </tr>
+                          <tr>
+                            <th class="applications__table-field applications__table-blue">Создание рекламного скрипта для Youtube</th>
+                            <td class="applications__table-field">1 час</td>
+                            <td class="applications__table-field">30 минут</td>
+                            <td class="applications__table-field applications__table-red-trs">10 минут</td>
+                          </tr>
+                          <tr>
+                            <th class="applications__table-field applications__table-blue">Создание 10 кастомных e-mail рассылок</th>
+                            <td class="applications__table-field">5-10 часов</td>
+                            <td class="applications__table-field">3-5 часов</td>
+                            <td class="applications__table-field applications__table-red-trs">1-3 часа</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+                <section class="visuals section">
+                  <div class="visuals__container container">
+                    <div class="visuals__top">
+                      <h2 class="visuals__title">Более наглядно</h2>
+                      <select class="visuals__select select"> 
+                        <option class="visuals__btn-mobile" value="value1" data-tab="1">Что такое ChatGPT</option>
+                        <option class="visuals__btn-mobile" value="value2" data-tab="2">Мелкому и среднему бизнесу</option>
+                        <option class="visuals__btn-mobile" value="value3" data-tab="3">Крупному бизнесу</option>
+                      </select>
+                      <div class="visuals__btn-block"> 
+                        <button class="visuals__btn btn btn_uppercase btn_long" type="button" data-tab="1">Что такое ChatGPT</button>
+                        <button class="visuals__btn btn btn_uppercase btn_long" type="button" data-tab="2">Мелкому и среднему бизнесу</button>
+                        <button class="visuals__btn btn btn_uppercase btn_long" type="button" data-tab="3">Крупному бизнесу</button>
+                      </div>
+                    </div>
+                    <div class="visuals__content"> 
+                      <ol class="visuals__list" data-tab="1">
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Если разобраться, то с доверием все на самом деле предельно рационально. В этом вопросе не так много идеализма, как может показаться.</p>
+                            <p>Необходимость проявлять доверие базируется на моей собственной оценке соотношения затраченных усилий и получаемых выгод (другими словами, costs/benefits analysis).</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Это очень комплексный, но очень важный принцип. Вкратце, его можно сформулировать просто как “не обманывать”.</p>
+                            <p>Здесь, помимо того, что “обманывать плохо” (это правда), опять же, все достаточно рационально – обманывая, вы часто получаете краткосрочно выгодный вам результат, но создаёте долгосрочные репутационные, а иногда даже юридические риски.</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.</p>
+                          </div>
+                        </li>
+                      </ol>
+                      <ol class="visuals__list" data-tab="2">
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Если разобраться, то с доверием все на самом деле предельно рационально. В этом вопросе не так много идеализма, как может показаться.</p>
+                            <p>Необходимость проявлять доверие базируется на моей собственной оценке соотношения затраченных усилий и получаемых выгод (другими словами, costs/benefits analysis).</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Это очень комплексный, но очень важный принцип. Вкратце, его можно сформулировать просто как “не обманывать”.</p>
+                            <p>Здесь, помимо того, что “обманывать плохо” (это правда), опять же, все достаточно рационально – обманывая, вы часто получаете краткосрочно выгодный вам результат, но создаёте долгосрочные репутационные, а иногда даже юридические риски.</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.</p>
+                          </div>
+                        </li>
+                      </ol>
+                      <ol class="visuals__list" data-tab="3">
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Если разобраться, то с доверием все на самом деле предельно рационально. В этом вопросе не так много идеализма, как может показаться.</p>
+                            <p>Необходимость проявлять доверие базируется на моей собственной оценке соотношения затраченных усилий и получаемых выгод (другими словами, costs/benefits analysis).</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Это очень комплексный, но очень важный принцип. Вкратце, его можно сформулировать просто как “не обманывать”.</p>
+                            <p>Здесь, помимо того, что “обманывать плохо” (это правда), опять же, все достаточно рационально – обманывая, вы часто получаете краткосрочно выгодный вам результат, но создаёте долгосрочные репутационные, а иногда даже юридические риски.</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.</p>
+                          </div>
+                        </li>
+                        <li class="visuals__item">
+                          <h3 class="visuals__name">ChatGPT</h3>
+                          <div class="visuals__desc">
+                            <p>Для меня результаты, достигнутые путем нарушения этических норм, недопустимы.</p>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </section>
+                <div class="poster">
+                  <picture class="poster__img-wrap">
+                    <source media="(max-width: 767.98px)" srcset="./assets/img/poster/books-mobile.jpg"><img class="poster__img" src="./assets/img/poster/books.jpg" alt="">
+                  </picture>
+                </div>
+                <section class="guide section">
+                  <div class="guide__container container">
+                    <h2 class="guide__title title">Самое полноценное руководство по внедрению ChatGPT в бизнес <span class="title_accent">на русском</span></h2>
+                  </div>
+                  <div class="guide__bg-block">
+                    <picture class="guide__bg-wrap"> 
+                      <source media="(max-width: 991.98px)" srcset="./assets/img/guide/bg-mobile.png"><img class="guide__bg" src="./assets/img/guide/bg.png" alt="">
+                    </picture>
+                  </div>
+                </section>
+                <section class="about section">
+                  <div class="about__container container"> 
+                    <div class="about__title section__title-block">
+                      <h2 class="section__title">Обо мне</h2><span class="section__title-desc">Инструкция</span>
+                    </div>
+                    <div class="about__content">
+                      <p class="about__desc">Моя миссия - просвещение и подтверждение гипотез научным подходом и профессиональной реализацией услуг. Вернуть веру в индивидуальных экспертов. <span class="about__desc_accent">За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. При этом соблюдали обновленный брендбук и выбирали лучшие решения, которые упрощали жизнь пользователей.</span></p>
+                      <ul class="about__list">
+                        <li class="about__item"> 
+                          <h3 class="about__item-name">15 лет опыта</h3>
+                          <p class="about__item-desc">Более 15 лет занимаюсь бизнес-консультациями</p>
+                        </li>
+                        <li class="about__item"> 
+                          <h3 class="about__item-name">Консультант</h3>
+                          <p class="about__item-desc">ChatGPT подходит для написания т/з по дизайну</p>
+                        </li>
+                        <li class="about__item"> 
+                          <h3 class="about__item-name">Статьи</h3>
+                          <p class="about__item-desc">ChatGPT подходит для написания статей</p>
+                        </li>
+                        <li class="about__item"> 
+                          <h3 class="about__item-name">Скрипты</h3>
+                          <p class="about__item-desc">ChatGPT подходит для написания скриптов</p>
+                        </li>
+                      </ul>
+                      <p class="about__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском язык, разработанный компанией OpenAI и способный работать в диалоговом режиме, поддерживающий запросы на естественных языках. </p>
+                      <picture class="about__img-wrap"><img class="about__img" src="./assets/img/about/woman.jpg" alt=""></picture>
+                      <p class="about__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском язык, разработанный компанией OpenAI и способный работать в диалоговом режиме, поддерживающий запросы на естественных языках. </p>
+                    </div>
+                  </div>
+                </section>
+                <div class="poster">
+                  <picture class="poster__img-wrap">
+                    <source media="(max-width: 767.98px)" srcset="./assets/img/poster/books-mobile.jpg"><img class="poster__img" src="./assets/img/poster/books.jpg" alt="">
+                  </picture>
+                </div>
+                <section class="consultations section">
+                  <picture class="consultations__bg-wrap"><img class="consultations__bg" src="./assets/img/consultations/bg.png" alt=""></picture>
+                  <div class="consultations__container container">
+                    <h2 class="consultations__title section__title">Персональные консультации</h2>
+                    <table class="consultations__table">
+                      <thead class="consultations__head"> 
+                        <tr class="consultations__row consultations__row_main">
+                          <th class="consultations__main"> 
+                            <h3 class="consultations__heading">Что входит в консультацию</h3>
+                          </th>
+                          <th class="consultations__main consultations__main_info"> 
+                            <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
+                            <p class="consultations__desc">Проведем пробную консультацию</p>
+                            <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                          </th>
+                          <th class="consultations__main consultations__main_info"> 
+                            <h3 class="consultations__time">1 ча</h3><strong class="consultations__price">800₽</strong>
+                            <p class="consultations__desc">Проведем полноценную консультацию</p>
+                            <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                          </th>
+                          <th class="consultations__main consultations__main_info"> 
+                            <h3 class="consultations__time">2 часа</h3><strong class="consultations__price">1600₽</strong>
+                            <p class="consultations__desc">Проведем расширенную консультацию</p>
+                            <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                          </th>
+                        </tr>
+                        <tr class="consultations__row consultations__row_empty">
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                          <td> </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 1</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 2</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 3</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 4 </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 5</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 6</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 7</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 8</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 9</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr class="consultations__row"> 
+                          <td class="consultations__item consultations__item_text">Описание 10</td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                          <td class="consultations__item">
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </td>
+                        </tr>
+                      </thead>
+                    </table>
+                    <div class="consultations__acc">
+                      <div class="consultations__acc-item">
+                        <div class="consultations__main">
+                          <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
+                          <p class="consultations__desc">Проведем пробную консультацию</p>
+                          <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                          <button class="consultations__more-full" type="button" data-hc-control="consultation-1"></button>
+                          <button class="consultations__more" type="button" data-hc-control="consultation-1">Подробности 
+                            <svg class="consultations__more-icon">
+                              <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="consultations__acc-body" data-hc-content="consultation-1">
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="consultations__acc-item">
+                        <div class="consultations__main">
+                          <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
+                          <p class="consultations__desc">Проведем пробную консультацию</p>
+                          <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                          <button class="consultations__more-full" type="button" data-hc-control="consultation-2"></button>
+                          <button class="consultations__more" type="button" data-hc-control="consultation-2">Подробности 
+                            <svg class="consultations__more-icon">
+                              <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="consultations__acc-body" data-hc-content="consultation-2">
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="consultations__acc-item">
+                        <div class="consultations__main">
+                          <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
+                          <p class="consultations__desc">Проведем пробную консультацию</p>
+                          <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                          <button class="consultations__more-full" type="button" data-hc-control="consultation-3"></button>
+                          <button class="consultations__more" type="button" data-hc-control="consultation-3">Подробности 
+                            <svg class="consultations__more-icon">
+                              <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="consultations__acc-body" data-hc-content="consultation-3">
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon consultations__icon_checked">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                            <svg class="consultations__icon">
+                              <use xlink:href="./assets/sprite.svg#check"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="usage section">
+                  <div class="container usage__container"> 
+                    <div class="usage__title section__title-block">
+                      <h2 class="section__title">Как пользоваться нейросетью ChatGPT в России</h2><span class="section__title-desc">Инструкция</span>
+                    </div>
+                    <div class="usage__content"> 
+                      <p class="usage__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском язык, разработанный компанией OpenAI и способный работать в диалоговом режиме, поддерживающий запросы на естественных языках.  </p>
+                      <p class="usage__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском язык, разработанный компанией OpenAI и способный работать в диалоговом режиме, поддерживающий запросы на естественных языках. </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="testimonials section">
+                  <div class="testimonials__container container">
+                    <h2 class="testimonials__title section__title">Отзывы экспериментаторов</h2>
+                    <div class="testimonials__slider-block">
+                      <div class="swiper testimonials__slider"> 
+                        <div class="testimonials__slider-btn-block"> 
+                                  <button class="btn-arrow testimonials__slider-btn testimonials__slider-btn_prev" type="button"> 
+                                    <svg class="btn-arrow__icon btn-arrow__icon_arrow">
+                                      <use xlink:href="./assets/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="btn-arrow testimonials__slider-btn testimonials__slider-btn_next" type="button"> 
+                                    <svg class="btn-arrow__icon btn-arrow__icon_arrow btn-arrow__icon_right">
+                                      <use xlink:href="./assets/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                        </div>
+                        <ul class="swiper-wrapper"> 
+                          <li class="swiper-slide">
+                            <div class="testimonials__item"> 
+                              <blockquote class="testimonials__quote">
+                                 «Решила оставить отзыв о бизнес-консультации моего мужа. Я считаю, что это очень круто! <span class="testimonials__quote_accent">Он в жизни не был бизнес-тренере</span>, но благодаря этой консультации в один момент он стал им. И теперь мы с ним вместе занимаемся бизнесом по своему вкусу, а не по чужому. </blockquote>
+                              <div class="testimonials__person">
+                                <picture class="testimonials__avatar-wrap"><img class="testimonials__avatar" src="./assets/img/testimonials/avatar-1.png" alt=""></picture>
+                                <div class="testimonials__person-text-block"> <span class="testimonials__name">Романов Сергей Егорович</span><span class="testimonials__job">Noname Agency / Lead Designer</span></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <div class="testimonials__item"> 
+                              <blockquote class="testimonials__quote">
+                                 «Я очень довольна консультацией, особенно тем, что врач мне все подробно объяснил, рассказал и дал рекомендации. <span class="testimonials__quote_accent">Мне все понравилось. Все было хорошо, я осталась довольна. </span>Очень понравилась консультация.»</blockquote>
+                              <div class="testimonials__person">
+                                <picture class="testimonials__avatar-wrap"><img class="testimonials__avatar" src="./assets/img/testimonials/avatar-2.png" alt=""></picture>
+                                <div class="testimonials__person-text-block"> <span class="testimonials__name">Николаева Марта Антоновна</span><span class="testimonials__job">Noname Agency / Lead Designer</span></div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <div class="testimonials__item"> 
+                              <blockquote class="testimonials__quote">
+                                 «Спасибо за такую возможность. Консультация была очень полезной. Врач все объяснил доступно. Приду еще на прием.»</blockquote>
+                              <div class="testimonials__person">
+                                <picture class="testimonials__avatar-wrap"><img class="testimonials__avatar" src="./assets/img/testimonials/avatar-3.png" alt=""></picture>
+                                <div class="testimonials__person-text-block"> <span class="testimonials__name">Поляков Даниил Фёдорович</span><span class="testimonials__job">Noname Agency / Lead Designer</span></div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="steps section">
+                  <div class="steps__container container">
+                    <ul class="steps__list">
+                      <li class="steps__item">
+                        <div class="steps__content steps__content_circle"><strong class="steps__name">Начните использовать ChatGPT в своем бизнесе в 3 шага</strong></div>
+                        <li class="steps__item"> <a class="steps__content" href="#"> 
+                            <picture class="steps__img-wrap"><img class="steps__img" src="./assets/img/steps/step-1.jpg" alt=""></picture>
+                            <div class="steps__text-block"><span class="steps__step">1 шаг</span><strong class="steps__name">Ознакомиться с нашим материалом про ChatGPT</strong></div></a></li>
+                        <li class="steps__item"> <a class="steps__content" href="#"> 
+                            <picture class="steps__img-wrap"><img class="steps__img" src="./assets/img/steps/step-2.jpg" alt=""></picture>
+                            <div class="steps__text-block"><span class="steps__step">2 шаг</span><strong class="steps__name">Получить консультацию по ChatGPT</strong></div></a></li>
+                        <li class="steps__item"> <a class="steps__content" href="#"> 
+                            <picture class="steps__img-wrap"><img class="steps__img" src="./assets/img/steps/step-3.jpg" alt=""></picture>
+                            <div class="steps__text-block"><span class="steps__step">3 шаг</span><strong class="steps__name">Интегрировать ChatGPT в ваш бизнес</strong></div></a></li>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <section class="integration section">
+                  <div class="integration__container container"> 
+                    <div class="integration__title section__title-block"> 
+                      <h2 class="section__title">Как интегрировать ChatGPT в ваш бизнес</h2><span class="section__title-desc">Инструкция</span>
+                    </div>
+                    <div class="integration__content">
+                      <h3 class="integration__heading">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей.</h3>
+                      <div class="integration__desc-block"> 
+                        <p class="integration__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском язык, разработанный компанией OpenAI и способный работать в диалоговом режиме, поддерживающий запросы на естественных языках. </p>
+                        <p class="integration__desc">ChatGPT – это чат-бот с ИИ, работающий на основе алгоритма обработки естественного языка GPT-3, системы, которая по словам создателей, способна решить абсолютно любую задачу на английском языке.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="trial section">
+                  <div class="trial__bg-block">
+                    <picture class="trial__bg-wrap"> <img class="trial__bg" src="./assets/img/trial/bg.jpg" alt=""></picture>
+                  </div>
+                  <div class="trial__container container">
+                    <div class="trial__text-block">
+                      <h2 class="trial__title">Желаете попробовать ChatGPT в деле?</h2>
+                      <p class="trial__desc">Которая по словам создателей, способна решить абсолютно любую задачу на английском язык, разработанный компанией OpenAI.</p>
+                    </div>
+                    <div class="trial__btn-block">
+                      <button class="trial__btn btn btn_red btn_uppercase btn_lengthy" type="button">КУПИТЬ РУКОВОДСТВО</button>
+                      <button class="trial__btn btn btn_white btn_uppercase btn_lengthy" type="button">ЗАПЛАНИРОВАТЬ ВСТРЕЧУ</button>
+                    </div>
+                  </div>
+                </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__container container"> 
+          <div class="footer__info"> <a class="footer__logo" href="index.html">
+              <svg class="footer__logo-icon">
+                <use xlink:href="./assets/sprite.svg#logo-footer"></use>
+              </svg></a>
+            <p class="footer__desc">За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. </p>
+            <ul class="footer__social"> 
+              <li class="footer__social-item"> <a class="footer__social-link btn btn_white btn_short btn_fit" href="#">telegram</a></li>
+              <li class="footer__social-item"> <a class="footer__social-link btn btn_white btn_short btn_fit" href="#">vk</a></li>
+              <li class="footer__social-item"> <a class="footer__social-link btn btn_white btn_short btn_fit" href="#">instagram</a></li>
+            </ul>
+          </div>
+          <ul class="footer__nav-contacts">
+            <li class="footer__nav-contacts-item"><strong class="footer__nav-contacts-title">Навигация</strong>
+              <ul class="footer__nav-contacts-list">
+                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="./index.html">Главная</a></li>
+                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="./tarifs.html">Тарифы</a></li>
+                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="./about.html">О нас</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-contacts-item"><strong class="footer__nav-contacts-title">Контакты</strong>
+              <ul class="footer__nav-contacts-list">
+                <li class="footer__nav-contacts-list-item"> <a class="footer__nav-contacts-list-item" href="mailto:a_kabuki@gmail.com">a_kabuki@gmail.com</a></li>
+                <li class="footer__nav-contacts-list-item"> <a class="footer__nav-contacts-list-item" href="tel:+78629642535">+7 862 964 2535</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

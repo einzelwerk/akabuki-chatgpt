@@ -85,7 +85,13 @@ video {
   vertical-align: middle;
 }
 
-input[type="password"] {
+table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type='password'] {
   &::-ms-reveal {
     display: none;
   }
@@ -96,21 +102,21 @@ input::-webkit-inner-spin-button {
   appearance: none;
 }
 
-input[type=text]::-ms-clear {
+input[type='text']::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type=text]::-ms-reveal {
+input[type='text']::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
   display: none;
 }

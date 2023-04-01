@@ -1,0 +1,42 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.overlay {
+  position: fixed;
+  z-index: 200;
+  background: rgba(vars.$dark, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  inset: 0;
+
+  &_active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &_active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &_zoom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 90vh;
+  }
+}

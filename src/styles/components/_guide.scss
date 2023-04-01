@@ -1,0 +1,41 @@
+@use '../utils/variables' as vars;
+@use '../utils/mixins' as mix;
+@use '../utils/functions' as fn;
+
+.guide {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 0;
+  color: vars.$white;
+  text-align: center;
+  background: vars.$dark-blue;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include mix.h1;
+
+    max-width: 862px;
+  }
+
+  &__bg {
+    &-block,
+    &-wrap,
+    & {
+      width: 100%;
+    }
+
+    &-block {
+      position: relative;
+      z-index: -1;
+
+      @media (max-width: vars.$lg) {
+        margin-top: -86px;
+      }
+    }
+  }
+}

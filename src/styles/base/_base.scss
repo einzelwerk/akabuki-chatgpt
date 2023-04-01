@@ -30,11 +30,34 @@
   }
 
   &__title {
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: fn.cmin(10, 20);
+    }
+
     @include mix.h2;
+
+    &-desc {
+      position: relative;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+
+      &::before {
+        width: 20px;
+        height: 20px;
+        background: vars.$red;
+        border-radius: 50%;
+        content: '';
+      }
+    }
   }
 }
 
 .title {
+  color: vars.$white;
+
   @include mix.h1;
 
   &_accent {

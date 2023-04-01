@@ -3,11 +3,18 @@
 @use '../utils/functions' as fn;
 
 .btn {
+  @include mix.p16;
+
   padding: 14px 24px;
+  white-space: nowrap;
   text-align: center;
   border: 1px solid transparent;
   border-radius: 16px;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  @media (max-width: vars.$md) {
+    width: 100%;
+  }
 
   &_small {
     padding: 11px 23px;
@@ -34,5 +41,56 @@
   &_trs {
     color: vars.$white;
     border-color: vars.$white;
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
+  &_long {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  &_lengthy {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  &_short {
+    padding: 8px 16px;
+  }
+
+  &_fit {
+    @media (max-width: vars.$md) {
+      width: unset;
+    }
+  }
+}
+
+.btn-arrow {
+  display: inline-flex;
+  padding: 17px;
+  color: vars.$dark;
+  border: 1px solid vars.$divider-on-light-bg;
+  border-radius: 50%;
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: vars.$white;
+    background-color: vars.$red;
+    border-color: vars.$red;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    transition: color 0.5s ease-in-out;
+
+    &_right {
+      transform: rotate(180deg);
+    }
   }
 }

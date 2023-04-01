@@ -1,0 +1,5 @@
+mixin btn-arrow(data, className = '')
+  - const classPos = data.isRight ? 'btn-arrow__icon_right' : '';
+  button.btn-arrow(class=className type="button") 
+    svg.btn-arrow__icon.btn-arrow__icon_arrow(class=classPos)
+      use(xlink:href="./assets/sprite.svg#arrow-left")

@@ -1,0 +1,37 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as vars;
+@use '../utils/functions' as fn;
+
+.integration {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__title {
+    max-width: 372px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(20, 32);
+    max-width: 810px;
+  }
+
+  &__heading {
+    @include mix.h3;
+  }
+
+  &__desc {
+    &-block {
+      display: flex;
+      gap: fn.cmin(20, 22);
+
+      @media (max-width: vars.$md) {
+        flex-direction: column;
+      }
+    }
+  }
+}
