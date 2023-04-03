@@ -20,8 +20,11 @@
 
   &__container {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
+
+    @media (max-width: vars.$lg) {
+      flex-direction: column;
+    }
   }
 }

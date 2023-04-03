@@ -4,6 +4,10 @@ export const classNames = {
     blur: 'header_blur',
     hide: 'header_hide',
   },
+  nav: {
+    link: 'header__nav-link',
+    activeLink: 'header__nav-link_active',
+  },
   burgerMenu: {
     menu: 'menu',
     menuActive: 'menu_active',
@@ -40,7 +44,7 @@ export const classNames = {
       blockActive: 'popup_active',
     },
     zoom: {
-      block: 'popup_zoom',
+      block: 'popup-zoom',
       img: 'popup-zoom__img',
     },
   },
@@ -59,4 +63,11 @@ export const classNames = {
     active: 'fixed_active',
     dependent: 'hero',
   },
+  parallax: [
+    'guide__bg-wrap_1',
+    'guide__bg-wrap_2',
+    'guide__bg-wrap_3',
+    'guide__bg-wrap_4',
+    'guide__bg-wrap_5',
+  ]
 };

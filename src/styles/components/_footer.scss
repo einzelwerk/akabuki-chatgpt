@@ -15,6 +15,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: fn.cmax(40, 120);
+    padding-bottom: 74px;
+
+    @media (max-width: vars.$lg) {
+      padding-bottom: 136px;
+    }
+
+    @media (max-width: vars.$sm) {
+      flex-flow: column nowrap;
+    }
   }
 
   &__info {
@@ -22,6 +31,7 @@
     flex-direction: column;
     gap: fn.cmin(24, 32);
     max-width: 320px;
+    margin-right: auto;
   }
 
   &__logo {
@@ -43,12 +53,20 @@
     display: flex;
     flex-wrap: wrap;
     gap: fn.cmax(40, 120);
-    margin-left: auto;
+
+    @media (max-width: vars.$sm) {
+      flex-flow: column nowrap;
+    }
 
     &-item {
       display: flex;
       flex-direction: column;
       gap: 24px;
+      min-width: 200px;
+
+      @media (max-width: vars.$md) {
+        min-width: unset;
+      }
     }
 
     &-title {

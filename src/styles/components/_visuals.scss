@@ -20,6 +20,10 @@
 
   &__title {
     @include mix.h1;
+
+    @media (max-width: vars.$md) {
+      @include mix.h2;
+    }
   }
 
   &__btn {
@@ -37,6 +41,7 @@
     }
 
     color: vars.$white;
+    line-height: 28px;
     background: rgba(vars.$white, 0.1);
     border-color: rgba(vars.$white, 0.1);
 

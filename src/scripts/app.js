@@ -1,3 +1,4 @@
+import 'smoothscroll-for-websites';
 import HandyCollapse from 'handy-collapse';
 import { updateHeaderOnScroll } from './vendor/headerBehavior';
 import { Select } from './vendor/select/Select';
@@ -6,11 +7,16 @@ import { initInnovationSlider, initPresentationSlider, initResonsSlider, initRev
 import { closePopupOnClick, initImagePopup } from './modules/popups';
 import { initTabs } from './modules/tabs';
 import { toggleFixedOnScroll } from './modules/scrollToggle';
+import { initParallaxEffect } from './modules/gsap';
+import { activateNavLink } from './modules/navigation';
 
 import 'normalize.css';
 
 updateHeaderOnScroll(); // Header
 toggleMenu(); // Menu
+
+// Navigation
+activateNavLink();
 
 // Select
 new Select('.select'); // eslint-disable-line
@@ -33,3 +39,6 @@ initTabs();
 
 // Scroll Toggle
 toggleFixedOnScroll();
+
+// Parallax Effect
+initParallaxEffect();

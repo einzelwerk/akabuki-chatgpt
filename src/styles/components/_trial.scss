@@ -5,7 +5,10 @@
 .trial {
   position: relative;
   z-index: 2;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   color: vars.$white;
 
   &__bg {
@@ -18,8 +21,8 @@
 
     &-block {
       position: absolute;
-      inset: 0;
       z-index: -1;
+      inset: 0;
 
       &::after {
         position: absolute;
@@ -38,6 +41,10 @@
     justify-content: center;
     height: 100%;
     text-align: center;
+
+    @media (max-width: vars.$md) {
+      text-align: left;
+    }
   }
 
   &__text-block {
@@ -45,22 +52,30 @@
     flex-direction: column;
     gap: fn.cmin(10, 24);
     align-items: center;
+    max-width: 660px;
   }
 
   &__title {
     @include mix.h1;
+
+    @media (max-width: vars.$md) {
+      @include mix.h2;
+    }
   }
 
   &__desc {
-    max-width: 660px;
     color: rgba(vars.$white, 0.7);
+
+    @media (max-width: vars.$md) {
+      line-height: 24px;
+    }
   }
 
   &__btn {
     &-block {
       display: flex;
       flex-wrap: wrap;
-      gap: fn.cmin(8, 10);
+      gap: 10px 8px;
     }
   }
 }

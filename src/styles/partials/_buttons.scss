@@ -6,6 +6,8 @@
   @include mix.p16;
 
   padding: 14px 24px;
+  font-weight: 500;
+  line-height: 28px;
   white-space: nowrap;
   text-align: center;
   border: 1px solid transparent;
@@ -13,6 +15,8 @@
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
   @media (max-width: vars.$md) {
+    @include mix.p14;
+
     width: 100%;
   }
 

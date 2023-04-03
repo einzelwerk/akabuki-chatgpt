@@ -6,7 +6,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: fn.cmin(30, 60);
   }
 
   &__text-block {
@@ -28,6 +28,7 @@
 
   &__table {
     &-block {
+      margin: -20px;
       overflow-x: auto;
 
       @media (max-width: vars.$xxl) {
@@ -36,12 +37,18 @@
 
       @media (max-width: vars.$md) {
         @include mix.p14;
+
+        margin: -12px -4px;
       }
     }
 
     width: max-content;
     border-collapse: separate;
-    border-spacing: 10px;
+    border-spacing: 20px;
+
+    @media (max-width: vars.$md) {
+      border-spacing: 4px 12px;
+    }
 
     &-field {
       width: fn.cmin(200, 324);

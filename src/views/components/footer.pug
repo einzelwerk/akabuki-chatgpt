@@ -3,21 +3,21 @@ mixin footer
     const navList = [
       {
         text: 'Главная',
-        href: './index.html',
+        href: '#main',
       },
       {
         text: 'Тарифы',
-        href: './tarifs.html',
+        href: '#tariffs',
       },
       {
         text: 'О нас',
-        href: './about.html',
+        href: '#about',
       },
     ];
   footer.footer
     .footer__container.container 
       .footer__info 
-        a.footer__logo(href="index.html")
+        a.footer__logo(href="#main")
           svg.footer__logo-icon
             use(xlink:href="./assets/sprite.svg#logo-footer")
         p.footer__desc За последние пару лет поддержки мы создали и обновили более 200 мультиязычных сервисов и страниц. 

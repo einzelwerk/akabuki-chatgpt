@@ -19,6 +19,7 @@ export function initInnovationSlider() {
     spaceBetween: 20,
     speed: 1000,
     keyboard: true,
+    rewind: true,
   });
 }
 
@@ -70,6 +71,7 @@ export function initResonsSlider() {
     spaceBetween: 20,
     speed: 1000,
     keyboard: true,
+    rewind: true,
     breakpoints: {
       [breakpointsMin.md]: {
         slidesPerView: 2,
@@ -90,6 +92,7 @@ export function initReviewsSlider() {
     slidesPerView: 1,
     spaceBetween: 40,
     speed: 1000,
+    rewind: true,
     breakpoints: {
       [breakpointsMin.md]: {
         slidesPerView: 1.072,

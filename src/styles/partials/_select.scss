@@ -5,6 +5,8 @@
 .select {
   color: vars.$white;
 
+  @include mix.p14;
+
   &.is-open {
     .select__head {
       background: vars.$red;

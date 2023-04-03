@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     gap: fn.cmin(40, 60);
-    max-width: 822px;
+    max-width: 810px;
   }
 
   &__desc {
@@ -54,14 +54,21 @@
       }
     }
 
+    @media (max-width: vars.$lg) {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #e1e1e1;
+    }
+
     &-name {
       @include mix.h2;
     }
 
     &-desc {
-      @include mix.p16;
-
       color: #999;
+
+      @media (min-width: vars.$min-lg) {
+        @include mix.p16;
+      }
     }
   }
 
@@ -71,5 +78,10 @@
     }
 
     width: 100%;
+    aspect-ratio: 1/0.62;
+
+    @media (max-width: vars.$md) {
+      aspect-ratio: 1/0.87;
+    }
   }
 }

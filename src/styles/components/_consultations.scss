@@ -5,6 +5,7 @@
 .consultations {
   position: relative;
   z-index: 2;
+  padding: fn.cmin(40, 100) 0;
   color: vars.$white;
   background: vars.$dark-blue;
 
@@ -23,6 +24,8 @@
     display: flex;
     flex-direction: column;
     gap: fn.cmin(40, 60);
+    max-width: 1180px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -104,6 +107,8 @@
   &__main {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     padding-bottom: fn.cmin(10, 20);
     text-align: left;
@@ -124,20 +129,30 @@
   }
 
   &__heading {
-    @include mix.h2;
+    @include mix.h3-desktop;
   }
 
   &__time {
-    @include mix.h2;
+    @include mix.h3-desktop;
 
     margin-bottom: 4px;
   }
 
   &__price {
-    @include mix.h4;
+    @include mix.h4-desktop;
 
+    display: flex;
+    gap: 10px;
     margin-bottom: 16px;
     color: vars.$gray;
+
+    &_old {
+      text-decoration: line-through;
+    }
+
+    &_new {
+      color: vars.$red;
+    }
   }
 
   &__desc {
@@ -148,9 +163,12 @@
 
   &__btn {
     width: 100%;
+    margin-top: auto;
   }
 
   &__more {
+    @include mix.p16;
+
     display: flex;
     gap: 5px;
     align-items: center;

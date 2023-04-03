@@ -2,50 +2,115 @@
 @use './functions' as fn;
 
 @mixin h1 {
+  $fsz: fn.cmin(48, 60);
+
   font-weight: 500;
-  font-size: fn.cmin(48, 60);
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
   line-height: fn.cmin(52, 60);
+  letter-spacing: calc(-0.05 * $fsz);
+
+  @media (max-width: vars.$md) {
+    letter-spacing: calc(-0.03 * $fsz);
+  }
 }
 
 @mixin h2 {
+  $fsz: fn.cmin(34, 40);
+
   font-weight: 500;
-  font-size: fn.cmin(34, 40);
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
   line-height: fn.cmin(44, 48);
+  letter-spacing: calc(-0.03 * $fsz);
+
+  @media (max-width: vars.$md) {
+    letter-spacing: calc(-0.03 * $fsz);
+  }
 }
 
 @mixin h3 {
+  $fsz: fn.cmin(24, 32);
+
   font-weight: 500;
-  font-size: fn.cmin(24, 32);
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
   line-height: fn.cmin(32, 40);
+  letter-spacing: calc(-0.03 * $fsz);
+
+  @media (max-width: vars.$md) {
+    letter-spacing: calc(-0.03 * $fsz);
+  }
+}
+
+@mixin h3-desktop {
+  $fsz: 32px;
+
+  font-weight: 500;
+  font-size: $fsz;
+  font-family: VisbyCF, sans-serif;
+  line-height: 40px;
+  letter-spacing: calc(-0.03 * $fsz);
+
+  @media (max-width: vars.$md) {
+    letter-spacing: calc(-0.03 * $fsz);
+  }
 }
 
 @mixin h4 {
+  $fsz: fn.cmin(20, 24);
+
   font-weight: 500;
-  font-size: fn.cmin(20, 24);
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
-  line-height: fn.cmin(30, 32);
+  line-height: fn.cmin(24, 32);
+  letter-spacing: calc(-0.02 * $fsz);
+
+  @media (max-width: vars.$md) {
+    letter-spacing: calc(-0.03 * $fsz);
+  }
+}
+
+@mixin h4-desktop {
+  $fsz: 24px;
+
+  font-weight: 500;
+  font-size: $fsz;
+  font-family: VisbyCF, sans-serif;
+  line-height: 32px;
+  letter-spacing: calc(-0.02 * $fsz);
+
+  @media (max-width: vars.$md) {
+    letter-spacing: calc(-0.03 * $fsz);
+  }
 }
 
 @mixin p20 {
+  $fsz: 20px;
+
   font-weight: 400;
-  font-size: 20px;
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
   line-height: 30px;
+  letter-spacing: calc(-0.01 * $fsz);
 }
 
 @mixin p16 {
+  $fsz: 16px;
+
   font-weight: 400;
-  font-size: 16px;
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
   line-height: 24px;
+  letter-spacing: 0;
 }
 
 @mixin p14 {
+  $fsz: 14px;
+
   font-weight: 500;
-  font-size: 14px;
+  font-size: $fsz;
   font-family: VisbyCF, sans-serif;
   line-height: 18px;
+  letter-spacing: 0;
 }

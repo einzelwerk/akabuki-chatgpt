@@ -81,98 +81,113 @@ mixin consultations
         { text: 'Длинное описание 1', checked: false, },
       ],
     ];
-  section.consultations.section
+  section#tariffs.consultations.section
     picture.consultations__bg-wrap
       img.consultations__bg(src="@/assets/img/consultations/bg.png" alt="")
-    .consultations__container.container
-      h2.consultations__title.section__title Персональные консультации
-      table.consultations__table
-        thead.consultations__head 
-          tr.consultations__row.consultations__row_main
-            th.consultations__main 
-              h3.consultations__heading Что входит в консультацию
-            th.consultations__main.consultations__main_info 
+    .container
+      .consultations__container
+        h2.consultations__title.section__title Персональные консультации
+        table.consultations__table
+          thead.consultations__head 
+            tr.consultations__row.consultations__row_main
+              th 
+                .consultations__main 
+                  h3.consultations__heading Что входит в консультацию
+              th 
+                .consultations__main.consultations__main_info 
+                  h3.consultations__time 15 минут
+                  .consultations__price 
+                    strong Бесплатно
+                  p.consultations__desc Проведем пробную консультацию
+                  button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
+              th 
+                .consultations__main.consultations__main_info 
+                  h3.consultations__time 1 чаc
+                  .consultations__price 
+                    strong.consultations__price_new 80 €
+                    strong.consultations__price_old 90 €
+                  p.consultations__desc Проведем полноценную консультацию
+                  button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
+              th 
+                .consultations__main.consultations__main_info 
+                  h3.consultations__time 2 часа
+                  .consultations__price 
+                    strong.consultations__price_new 140 €
+                    strong.consultations__price_old 160 €
+                  p.consultations__desc Проведем расширенную консультацию
+                  button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
+            tr.consultations__row.consultations__row_empty
+              td 
+              td 
+              td 
+              td  
+            each line in tableList
+              tr.consultations__row 
+                td.consultations__item.consultations__item_text=line.text
+                each checked in line.chekcList
+                  - const classCheck = checked ? 'consultations__icon_checked' : ''
+                  td.consultations__item
+                    svg.consultations__icon(class=classCheck)
+                      use(xlink:href="./assets/sprite.svg#check")
+        .consultations__acc
+          .consultations__acc-item
+            .consultations__main
               h3.consultations__time 15 минут
-              strong.consultations__price Бесплатно
+              .consultations__price 
+                strong Бесплатно
               p.consultations__desc Проведем пробную консультацию
               button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
-            th.consultations__main.consultations__main_info 
-              h3.consultations__time 1 ча
-              strong.consultations__price 800₽
-              p.consultations__desc Проведем полноценную консультацию
-              button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
-            th.consultations__main.consultations__main_info 
-              h3.consultations__time 2 часа
-              strong.consultations__price 1600₽
-              p.consultations__desc Проведем расширенную консультацию
-              button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
-          tr.consultations__row.consultations__row_empty
-            td 
-            td 
-            td 
-            td  
-          each line in tableList
-            tr.consultations__row 
-              td.consultations__item.consultations__item_text=line.text
-              each checked in line.chekcList
-                - const classCheck = checked ? 'consultations__icon_checked' : ''
-                td.consultations__item
+              button.consultations__more-full(type="button" data-hc-control="consultation-1")
+              button.consultations__more(type="button" data-hc-control="consultation-1")
+                | Подробности 
+                svg.consultations__more-icon
+                  use(xlink:href="./assets/sprite.svg#chevron-bottom")
+            .consultations__acc-body(data-hc-content="consultation-1")
+              each item in accList[0]
+                - const classCheck = item.checked ? 'consultations__icon_checked' : ''
+                .consultations__row.consultations__item
+                  span=item.text
                   svg.consultations__icon(class=classCheck)
                     use(xlink:href="./assets/sprite.svg#check")
-      .consultations__acc
-        .consultations__acc-item
-          .consultations__main
-            h3.consultations__time 15 минут
-            strong.consultations__price Бесплатно
-            p.consultations__desc Проведем пробную консультацию
-            button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
-            button.consultations__more-full(type="button" data-hc-control="consultation-1")
-            button.consultations__more(type="button" data-hc-control="consultation-1")
-              | Подробности 
-              svg.consultations__more-icon
-                use(xlink:href="./assets/sprite.svg#chevron-bottom")
-          .consultations__acc-body(data-hc-content="consultation-1")
-            each item in accList[0]
-              - const classCheck = item.checked ? 'consultations__icon_checked' : ''
-              .consultations__row.consultations__item
-                span=item.text
-                svg.consultations__icon(class=classCheck)
-                  use(xlink:href="./assets/sprite.svg#check")
-        .consultations__acc-item
-          .consultations__main
-            h3.consultations__time 15 минут
-            strong.consultations__price Бесплатно
-            p.consultations__desc Проведем пробную консультацию
-            button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
-            button.consultations__more-full(type="button" data-hc-control="consultation-2")
-            button.consultations__more(type="button" data-hc-control="consultation-2")
-              | Подробности 
-              svg.consultations__more-icon
-                use(xlink:href="./assets/sprite.svg#chevron-bottom")
-          .consultations__acc-body(data-hc-content="consultation-2")
-            each item in accList[1]
-              - const classCheck = item.checked ? 'consultations__icon_checked' : ''
-              .consultations__row.consultations__item
-                span=item.text
-                svg.consultations__icon(class=classCheck)
-                  use(xlink:href="./assets/sprite.svg#check")
-        .consultations__acc-item
-          .consultations__main
-            h3.consultations__time 15 минут
-            strong.consultations__price Бесплатно
-            p.consultations__desc Проведем пробную консультацию
-            button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
-            button.consultations__more-full(type="button" data-hc-control="consultation-3")
-            button.consultations__more(type="button" data-hc-control="consultation-3")
-              | Подробности 
-              svg.consultations__more-icon
-                use(xlink:href="./assets/sprite.svg#chevron-bottom")
-          .consultations__acc-body(data-hc-content="consultation-3")
-            each item in accList[2]
-              - const classCheck = item.checked ? 'consultations__icon_checked' : ''
-              .consultations__row.consultations__item
-                span=item.text
-                svg.consultations__icon(class=classCheck)
-                  use(xlink:href="./assets/sprite.svg#check")
+          .consultations__acc-item
+            .consultations__main
+              h3.consultations__time 1 час
+              .consultations__price 
+                strong.consultations__price_new 80 €
+                strong.consultations__price_old 90 €
+              p.consultations__desc Проведем полноценную консультацию
+              button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
+              button.consultations__more-full(type="button" data-hc-control="consultation-2")
+              button.consultations__more(type="button" data-hc-control="consultation-2")
+                | Подробности 
+                svg.consultations__more-icon
+                  use(xlink:href="./assets/sprite.svg#chevron-bottom")
+            .consultations__acc-body(data-hc-content="consultation-2")
+              each item in accList[1]
+                - const classCheck = item.checked ? 'consultations__icon_checked' : ''
+                .consultations__row.consultations__item
+                  span=item.text
+                  svg.consultations__icon(class=classCheck)
+                    use(xlink:href="./assets/sprite.svg#check")
+          .consultations__acc-item
+            .consultations__main
+              h3.consultations__time 2 часа
+              .consultations__price 
+                strong.consultations__price_new 140 €
+                strong.consultations__price_old 160 €
+              p.consultations__desc Проведем расширенную консультацию
+              button.consultations__btn.btn.btn_blue(type="button") Запланировать встречу
+              button.consultations__more-full(type="button" data-hc-control="consultation-3")
+              button.consultations__more(type="button" data-hc-control="consultation-3")
+                | Подробности 
+                svg.consultations__more-icon
+                  use(xlink:href="./assets/sprite.svg#chevron-bottom")
+            .consultations__acc-body(data-hc-content="consultation-3")
+              each item in accList[2]
+                - const classCheck = item.checked ? 'consultations__icon_checked' : ''
+                .consultations__row.consultations__item
+                  span=item.text
+                  svg.consultations__icon(class=classCheck)
+                    use(xlink:href="./assets/sprite.svg#check")
 
 

@@ -33,10 +33,22 @@
     opacity: 1;
   }
 
-  &_zoom {
+  &-zoom {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    width: 70vw;
     max-height: 90vh;
+
+    @media (max-width: vars.$lg) {
+      width: 90vw;
+    }
+
+    &__img {
+      &-wrap,
+      & {
+        width: 100%;
+      }
+    }
   }
 }

@@ -12,8 +12,10 @@
   <body>
     <div class="app home-page">
       <div class="overlay"> 
-        <div class="popup popup_zoom">
-          <picture class="popup-zoom__img-wrap"><img class="popup-zoom__img" src="" alt=""/></picture>
+        <div class="popup popup-zoom">
+          <picture class="popup-zoom__img-wrap">
+            <div class="popup-zoom__img-wrap"> <img class="popup-zoom__img" src="" alt=""/></div>
+          </picture>
         </div>
       </div>
       <div class="fixed"> 
@@ -34,24 +36,24 @@
           </div>
           <nav class="menu__nav"> 
             <ul class="menu__nav-list"> 
-              <li class="menu__nav-item"><a class="menu__nav-link menu__nav-link_active" href="./index.html">Главная</a></li>
-              <li class="menu__nav-item"><a class="menu__nav-link" href="./tarifs.html">Тарифы</a></li>
-              <li class="menu__nav-item"><a class="menu__nav-link" href="./about.html">Обо мне</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="#main">Главная</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="#tariffs">Тарифы</a></li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="#about">Обо мне</a></li>
             </ul>
           </nav>
           <button class="menu__advice btn btn_red" type="button" data-popup-open="advice">Консультация</button>
         </div>
       </div>
       <header class="header">
-        <div class="header__container container"><a class="header__logo" href="#"> 
+        <div class="header__container container"><a class="header__logo" href="#main"> 
             <svg class="header__logo-icon">
               <use xlink:href="./assets/sprite.svg#logo"></use>
             </svg></a>
           <nav class="header__nav"> 
             <ul class="header__nav-list">
-              <li class="header__nav-item"><a class="header__nav-link header__nav-link_active" href="./index.html">Главная</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="./tarifs.html">Тарифы</a></li>
-              <li class="header__nav-item"><a class="header__nav-link" href="./about.html">Обо мне</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#main">Главная</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#tariffs">Тарифы</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="#about">Обо мне</a></li>
             </ul>
           </nav>
           <div class="header__contacts"> <a class="header__contacts-tel" href="tel:+78009999999">+7 800 999 99 99</a>
@@ -61,7 +63,7 @@
         </div>
       </header>
       <main class="main">
-                <section class="hero section-first">
+                <section class="hero section-first" id="main">
                   <picture class="hero__bg-wrap"><img class="hero__bg" src="./assets/img/hero/bg.jpg" alt=""></picture>
                   <div class="hero__container container">
                     <h1 class="hero__title title"><span class="title_accent">Помогаю </span><br>интегрировать ChatGPT <br><span class="title_accent">в рабочие процессы</span></h1>
@@ -143,7 +145,9 @@
                           </li>
                         </ul>
                       </div>
-                      <picture class="innovation__phone-wrap"> <img class="innovation__phone" src="./assets/img/innovation/phone.png" alt=""></picture>
+                      <picture class="innovation__phone-wrap"> 
+                        <source media="(max-width: 767.98px)" srcset="./assets/img/innovation/phone-mobile.png"><img class="innovation__phone" src="./assets/img/innovation/phone.png" alt="">
+                      </picture>
                     </div>
                   </div>
                 </section>
@@ -283,9 +287,6 @@
                     <div class="applications__table-block">
                       <table class="applications__table">
                         <tbody>
-                          <tr></tr>
-                          <tr></tr>
-                          <tr></tr>
                           <tr>
                             <td></td>
                             <th class="applications__table-field applications__table-blue">С помощью ChatGPT</th>
@@ -428,12 +429,14 @@
                     <h2 class="guide__title title">Самое полноценное руководство по внедрению ChatGPT в бизнес <span class="title_accent">на русском</span></h2>
                   </div>
                   <div class="guide__bg-block">
-                    <picture class="guide__bg-wrap"> 
-                      <source media="(max-width: 991.98px)" srcset="./assets/img/guide/bg-mobile.png"><img class="guide__bg" src="./assets/img/guide/bg.png" alt="">
-                    </picture>
+                    <picture class="guide__bg-wrap guide__bg-wrap_1"><img class="guide__bg" src="./assets/img/guide/image-1.png" alt=""></picture>
+                    <picture class="guide__bg-wrap guide__bg-wrap_2"><img class="guide__bg" src="./assets/img/guide/image-2.png" alt=""></picture>
+                    <picture class="guide__bg-wrap guide__bg-wrap_3"><img class="guide__bg" src="./assets/img/guide/image-3.png" alt=""></picture>
+                    <picture class="guide__bg-wrap guide__bg-wrap_4"><img class="guide__bg" src="./assets/img/guide/image-4.png" alt=""></picture>
+                    <picture class="guide__bg-wrap guide__bg-wrap_5"><img class="guide__bg" src="./assets/img/guide/image-5.png" alt=""></picture>
                   </div>
                 </section>
-                <section class="about section">
+                <section class="about section" id="about">
                   <div class="about__container container"> 
                     <div class="about__title section__title-block">
                       <h2 class="section__title">Обо мне</h2><span class="section__title-desc">Инструкция</span>
@@ -469,413 +472,429 @@
                     <source media="(max-width: 767.98px)" srcset="./assets/img/poster/books-mobile.jpg"><img class="poster__img" src="./assets/img/poster/books.jpg" alt="">
                   </picture>
                 </div>
-                <section class="consultations section">
+                <section class="consultations section" id="tariffs">
                   <picture class="consultations__bg-wrap"><img class="consultations__bg" src="./assets/img/consultations/bg.png" alt=""></picture>
-                  <div class="consultations__container container">
-                    <h2 class="consultations__title section__title">Персональные консультации</h2>
-                    <table class="consultations__table">
-                      <thead class="consultations__head"> 
-                        <tr class="consultations__row consultations__row_main">
-                          <th class="consultations__main"> 
-                            <h3 class="consultations__heading">Что входит в консультацию</h3>
-                          </th>
-                          <th class="consultations__main consultations__main_info"> 
-                            <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
+                  <div class="container">
+                    <div class="consultations__container">
+                      <h2 class="consultations__title section__title">Персональные консультации</h2>
+                      <table class="consultations__table">
+                        <thead class="consultations__head"> 
+                          <tr class="consultations__row consultations__row_main">
+                            <th> 
+                              <div class="consultations__main"> 
+                                <h3 class="consultations__heading">Что входит в консультацию</h3>
+                              </div>
+                            </th>
+                            <th> 
+                              <div class="consultations__main consultations__main_info"> 
+                                <h3 class="consultations__time">15 минут</h3>
+                                <div class="consultations__price"> <strong>Бесплатно</strong></div>
+                                <p class="consultations__desc">Проведем пробную консультацию</p>
+                                <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                              </div>
+                            </th>
+                            <th> 
+                              <div class="consultations__main consultations__main_info"> 
+                                <h3 class="consultations__time">1 чаc</h3>
+                                <div class="consultations__price"> <strong class="consultations__price_new">80 €</strong><strong class="consultations__price_old">90 €</strong></div>
+                                <p class="consultations__desc">Проведем полноценную консультацию</p>
+                                <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                              </div>
+                            </th>
+                            <th> 
+                              <div class="consultations__main consultations__main_info"> 
+                                <h3 class="consultations__time">2 часа</h3>
+                                <div class="consultations__price"> <strong class="consultations__price_new">140 €</strong><strong class="consultations__price_old">160 €</strong></div>
+                                <p class="consultations__desc">Проведем расширенную консультацию</p>
+                                <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
+                              </div>
+                            </th>
+                          </tr>
+                          <tr class="consultations__row consultations__row_empty">
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 1</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 2</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 3</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 4 </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 5</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 6</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 7</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 8</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 9</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                          <tr class="consultations__row"> 
+                            <td class="consultations__item consultations__item_text">Описание 10</td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                            <td class="consultations__item">
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </td>
+                          </tr>
+                        </thead>
+                      </table>
+                      <div class="consultations__acc">
+                        <div class="consultations__acc-item">
+                          <div class="consultations__main">
+                            <h3 class="consultations__time">15 минут</h3>
+                            <div class="consultations__price"> <strong>Бесплатно</strong></div>
                             <p class="consultations__desc">Проведем пробную консультацию</p>
                             <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
-                          </th>
-                          <th class="consultations__main consultations__main_info"> 
-                            <h3 class="consultations__time">1 ча</h3><strong class="consultations__price">800₽</strong>
+                            <button class="consultations__more-full" type="button" data-hc-control="consultation-1"></button>
+                            <button class="consultations__more" type="button" data-hc-control="consultation-1">Подробности 
+                              <svg class="consultations__more-icon">
+                                <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="consultations__acc-body" data-hc-content="consultation-1">
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="consultations__acc-item">
+                          <div class="consultations__main">
+                            <h3 class="consultations__time">1 час</h3>
+                            <div class="consultations__price"> <strong class="consultations__price_new">80 €</strong><strong class="consultations__price_old">90 €</strong></div>
                             <p class="consultations__desc">Проведем полноценную консультацию</p>
                             <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
-                          </th>
-                          <th class="consultations__main consultations__main_info"> 
-                            <h3 class="consultations__time">2 часа</h3><strong class="consultations__price">1600₽</strong>
+                            <button class="consultations__more-full" type="button" data-hc-control="consultation-2"></button>
+                            <button class="consultations__more" type="button" data-hc-control="consultation-2">Подробности 
+                              <svg class="consultations__more-icon">
+                                <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="consultations__acc-body" data-hc-content="consultation-2">
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="consultations__acc-item">
+                          <div class="consultations__main">
+                            <h3 class="consultations__time">2 часа</h3>
+                            <div class="consultations__price"> <strong class="consultations__price_new">140 €</strong><strong class="consultations__price_old">160 €</strong></div>
                             <p class="consultations__desc">Проведем расширенную консультацию</p>
                             <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
-                          </th>
-                        </tr>
-                        <tr class="consultations__row consultations__row_empty">
-                          <td> </td>
-                          <td> </td>
-                          <td> </td>
-                          <td> </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 1</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 2</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 3</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 4 </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 5</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 6</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 7</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 8</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 9</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                        <tr class="consultations__row"> 
-                          <td class="consultations__item consultations__item_text">Описание 10</td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                          <td class="consultations__item">
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </td>
-                        </tr>
-                      </thead>
-                    </table>
-                    <div class="consultations__acc">
-                      <div class="consultations__acc-item">
-                        <div class="consultations__main">
-                          <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
-                          <p class="consultations__desc">Проведем пробную консультацию</p>
-                          <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
-                          <button class="consultations__more-full" type="button" data-hc-control="consultation-1"></button>
-                          <button class="consultations__more" type="button" data-hc-control="consultation-1">Подробности 
-                            <svg class="consultations__more-icon">
-                              <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="consultations__acc-body" data-hc-content="consultation-1">
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
+                            <button class="consultations__more-full" type="button" data-hc-control="consultation-3"></button>
+                            <button class="consultations__more" type="button" data-hc-control="consultation-3">Подробности 
+                              <svg class="consultations__more-icon">
+                                <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
+                              </svg>
+                            </button>
                           </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="consultations__acc-item">
-                        <div class="consultations__main">
-                          <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
-                          <p class="consultations__desc">Проведем пробную консультацию</p>
-                          <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
-                          <button class="consultations__more-full" type="button" data-hc-control="consultation-2"></button>
-                          <button class="consultations__more" type="button" data-hc-control="consultation-2">Подробности 
-                            <svg class="consultations__more-icon">
-                              <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="consultations__acc-body" data-hc-content="consultation-2">
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="consultations__acc-item">
-                        <div class="consultations__main">
-                          <h3 class="consultations__time">15 минут</h3><strong class="consultations__price">Бесплатно</strong>
-                          <p class="consultations__desc">Проведем пробную консультацию</p>
-                          <button class="consultations__btn btn btn_blue" type="button">Запланировать встречу</button>
-                          <button class="consultations__more-full" type="button" data-hc-control="consultation-3"></button>
-                          <button class="consultations__more" type="button" data-hc-control="consultation-3">Подробности 
-                            <svg class="consultations__more-icon">
-                              <use xlink:href="./assets/sprite.svg#chevron-bottom"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="consultations__acc-body" data-hc-content="consultation-3">
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon consultations__icon_checked">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
-                          </div>
-                          <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
-                            <svg class="consultations__icon">
-                              <use xlink:href="./assets/sprite.svg#check"></use>
-                            </svg>
+                          <div class="consultations__acc-body" data-hc-content="consultation-3">
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon consultations__icon_checked">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
+                            <div class="consultations__row consultations__item"><span>Длинное описание 1</span>
+                              <svg class="consultations__icon">
+                                <use xlink:href="./assets/sprite.svg#check"></use>
+                              </svg>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -910,7 +929,7 @@
                                     </svg>
                                   </button>
                         </div>
-                        <ul class="swiper-wrapper"> 
+                        <ul class="swiper-wrapper testimonials__slider-wrapper">
                           <li class="swiper-slide">
                             <div class="testimonials__item"> 
                               <blockquote class="testimonials__quote">
@@ -946,7 +965,7 @@
                     </div>
                   </div>
                 </section>
-                <div class="steps section">
+                <section class="steps section">
                   <div class="steps__container container">
                     <ul class="steps__list">
                       <li class="steps__item">
@@ -963,7 +982,7 @@
                       </li>
                     </ul>
                   </div>
-                </div>
+                </section>
                 <section class="integration section">
                   <div class="integration__container container"> 
                     <div class="integration__title section__title-block"> 
@@ -996,7 +1015,7 @@
       </main>
       <footer class="footer">
         <div class="footer__container container"> 
-          <div class="footer__info"> <a class="footer__logo" href="index.html">
+          <div class="footer__info"> <a class="footer__logo" href="#main">
               <svg class="footer__logo-icon">
                 <use xlink:href="./assets/sprite.svg#logo-footer"></use>
               </svg></a>
@@ -1010,9 +1029,9 @@
           <ul class="footer__nav-contacts">
             <li class="footer__nav-contacts-item"><strong class="footer__nav-contacts-title">Навигация</strong>
               <ul class="footer__nav-contacts-list">
-                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="./index.html">Главная</a></li>
-                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="./tarifs.html">Тарифы</a></li>
-                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="./about.html">О нас</a></li>
+                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="#main">Главная</a></li>
+                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="#tariffs">Тарифы</a></li>
+                <li class="footer__nav-contacts-list-item"><a class="footer__nav-contacts-list-item" href="#about">О нас</a></li>
               </ul>
             </li>
             <li class="footer__nav-contacts-item"><strong class="footer__nav-contacts-title">Контакты</strong>

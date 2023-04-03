@@ -4,6 +4,7 @@
 
 .innovation {
   position: relative;
+  z-index: 2;
   padding-bottom: 0;
   color: vars.$white;
   text-align: center;
@@ -12,6 +13,7 @@
   &__bg {
     &-wrap {
       position: absolute;
+      z-index: -1;
       inset: 0;
     }
 
@@ -27,7 +29,7 @@
   }
 
   &__title {
-    max-width: 957px;
+    max-width: 933px;
 
     @media (max-width: vars.$lg) {
       @include mix.h2;
@@ -102,10 +104,12 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      max-width: 400px;
+      max-width: 440px;
     }
 
     &-item {
+      @include mix.h4;
+
       display: flex;
       flex-direction: column;
       padding: 20px;
@@ -118,6 +122,7 @@
       }
 
       &_red {
+        padding: 20px fn.cmin(20, 40);
         background: vars.$red;
         border-color: vars.$red;
       }
@@ -142,6 +147,14 @@
 
       @media (max-width: vars.$md) {
         margin-top: 15px;
+      }
+    }
+  }
+
+  &__phone {
+    &-wrap {
+      @media (max-width: vars.$md) {
+        margin: 0 -10px;
       }
     }
   }
